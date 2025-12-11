@@ -1,0 +1,33 @@
+site_name: Notatki z Matematyki
+use_directory_urls: false
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/white-balance-sunny
+        name: Switch to dark mode
+
+nav:
+  - Home: index.md
+  - Pochodne: pochodne.md
+
+markdown_extensions: []
+
+extra_css:
+  - https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
+  - css/custom.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
+  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
+  - js/katex-render.js
