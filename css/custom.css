@@ -1,0 +1,95 @@
+/* Theme variables: default = DARK; light overrides below */
+:root {
+  --custom-bg: #ffffff;         /* white background per request */
+  --custom-panel: #f8f9fb;      /* light panel/nav */
+  --custom-fg: #000000;         /* black text for readability on white */
+  --custom-accent: #000000;     /* black accent */
+  --custom-top: #0b2545;        /* granatowy pasek (nav/header) */
+  --custom-top-fg: #ffffff;     /* header text/icon color on top bar */
+  --custom-logo-filter: none;
+}
+
+/* Light mode overrides (Material sets data-md-color-scheme="light") */
+html[data-md-color-scheme="light"], body[data-md-color-scheme="light"] {
+  --custom-bg: #ffffff;         /* light background */
+  --custom-panel: #f8f9fb;      /* light panel / nav background */
+  --custom-fg: #000000;         /* black text */
+  --custom-accent: #000000;     /* black accent in light mode */
+  --custom-top: #0b2545;        /* granatowy top bar */
+  --custom-logo-filter: none;
+}
+
+/* Font */
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+html, body {
+  background: var(--custom-bg) !important;
+  color: var(--custom-fg) !important;
+}
+
+.md-content, .md-main__inner, .md-typeset {
+  background: transparent !important;
+  color: var(--custom-fg) !important;
+}
+
+/* Header / nav */
+.md-header {
+  background: var(--custom-top) !important;
+}
+
+.md-nav {
+  background: var(--custom-panel) !important;
+}
+
+/* Links and accents */
+a, .md-nav__link, .md-footer a {
+  color: var(--custom-accent) !important;
+}
+
+.md-nav__link--active {
+  background: rgba(111,66,193,0.10) !important;
+  color: var(--custom-accent) !important;
+}
+
+/* Buttons and primary elements */
+.md-button, .md-icon-button, .md-tabs__link--active {
+  color: var(--custom-accent) !important;
+}
+
+/* Code blocks contrast */
+.md-typeset pre, .md-typeset code {
+  background: rgba(0,0,0,0.06) !important;
+  color: var(--custom-fg) !important;
+}
+
+/* Make site header text stand out */
+.md-header__title {
+  color: var(--custom-top-fg) !important;
+}
+
+/* Ensure header logo and buttons are visible on dark top bar */
+.md-header__button.md-logo, .md-header__button.md-logo svg path {
+  color: var(--custom-top-fg) !important;
+  fill: var(--custom-top-fg) !important;
+}
+
+/* Header icons (search, palette) */
+.md-header__button.md-icon, .md-header__button.md-icon svg path {
+  color: var(--custom-top-fg) !important;
+  fill: var(--custom-top-fg) !important;
+}
+
+/* KaTeX color */
+.katex, .katex .katex-html { color: var(--custom-fg) !important }
+
+/* Ensure nav links are readable in both modes */
+.md-nav__link { color: var(--custom-fg) !important }
+
+/* Header / nav backgrounds (reinforce variables) */
+.md-header { background: var(--custom-top) !important }
+.md-nav { background: var(--custom-panel) !important }
+
+/* Improve logo visibility on top bar */
+.md-header__inner img { filter: var(--custom-logo-filter); }
