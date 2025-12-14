@@ -2,6 +2,8 @@ site_name: Notatki z Matematyki
 use_directory_urls: false
 theme:
   name: material
+  features:
+    - navigation.expand
   palette:
     - scheme: slate
       primary: green
@@ -18,9 +20,20 @@ theme:
 
 nav:
   - Home: index.md
+  - Algebra:
+      - Macierze: macierze.md
+      - Wyznaczniki: Wyznaczniki.md
+      - Macierze-odwrotne: macierze-odwrotne.md
+      - Równania w języku macierzy: równania-w-jezyku-macierzy.md
   - Pochodne: pochodne.md
 
-markdown_extensions: []
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - admonition
+  - attr_list
 
 extra_css:
   - https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap
