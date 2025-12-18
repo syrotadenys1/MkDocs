@@ -1,0 +1,26 @@
+# 📝 Notatka: Przewodnik do nauki geometrii analitycznej z AI
+
+## 📚 Omówione zagadnienia
+
+### [cite_start]1. Iloczyn Skalarny (Dot Product) [cite: 12]
+
+- **Cel:** Zrozumienie definicji algebraicznej i geometrycznej.
+- [cite_start]**Zastosowanie:** Obliczanie kątów między wektorami oraz sprawdzanie prostopadłości (ortogonalności)[cite: 13, 16].
+- [cite_start]**Metoda:** Prompty proszące o wyjaśnienie wyniku (dodatni/ujemny/zero) oraz ćwiczenia z konkretnymi wektorami[cite: 15, 18].
+
+### [cite_start]2. Iloczyn Wektorowy (Cross Product) [cite: 21]
+
+- **Cel:** Nauka operacji działającej tylko w przestrzeni 3D.
+- [cite_start]**Kluczowe pojęcia:** Reguła prawej dłoni, wyznacznik macierzy, nieprzemienność mnożenia[cite: 22, 24, 27].
+- [cite_start]**Interpretacja geometryczna:** Wynik to wektor prostopadły; jego długość to pole równoległoboku[cite: 26].
+
+### [cite_start]3. Iloczyn Mieszany (Scalar Triple Product) [cite: 32]
+
+- **Cel:** Łączenie iloczynu skalarnego i wektorowego.
+- [cite_start]**Zastosowanie:** Obliczanie objętości równoległościanu oraz badanie współpłaszczyznowości wektorów (czy leżą na jednej płaszczyźnie)[cite: 33, 41].
+
+### [cite_start]4. Podsumowanie i Zastosowania [cite: 42]
+
+- [cite_start]**Fizyka:** Moment siły, siła Lorentza[cite: 46].
+- [cite_start]**Grafika komputerowa:** Oświetlenie, wektory normalne[cite: 47].
+- [cite_start]**Test:** Sekcja kończy się prośbą o wygenerowanie przez AI zbiorczego testu sprawdzającego wiedzę[cite: 44].

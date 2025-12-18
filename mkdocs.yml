@@ -25,7 +25,10 @@ nav:
       - Wyznaczniki: Wyznaczniki.md
       - Macierze-odwrotne: macierze-odwrotne.md
       - Równania w języku macierzy: równania-w-jezyku-macierzy.md
-  - Pochodne: pochodne.md
+  - Geometria:
+      - Wektory: wektory.md
+      - Iloczyny: Iloczyny.md
+      - Geometria-analityczna: geometria_analityczna.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
