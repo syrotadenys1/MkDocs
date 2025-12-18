@@ -1,0 +1,1613 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="macierze-odwrotne.html">
+      
+      
+        <link rel="next" href="wektory.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Równania w języku macierzy - Notatki z Matematyki</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ukady-rownan-liniowych-i-algebra-macierzy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Notatki z Matematyki" class="md-header__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notatki z Matematyki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Równania w języku macierzy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Notatki z Matematyki" class="md-nav__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Notatki z Matematyki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macierze.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Wyznaczniki.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wyznaczniki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macierze-odwrotne.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze-odwrotne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Równania w języku macierzy
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="r%C3%B3wnania-w-jezyku-macierzy.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Równania w języku macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamenty-od-rownan-do-struktury-axb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fundamenty: Od Równań do Struktury \(Ax=b\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamenty: Od Równań do Struktury \(Ax=b\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ewolucja-zapisu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Ewolucja zapisu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-geboka-analiza-skadnikow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Głęboka analiza składników
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Głęboka analiza składników">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macierz-wspoczynnikow-a-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macierz Współczynników \(A\) (Operator)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wektor-niewiadomych-x-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wektor Niewiadomych \(x\) (Input)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wektor-wyrazow-wolnych-b-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wektor Wyrazów Wolnych \(b\) (Output)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dwie-perspektywy-wierszowa-vs-kolumnowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dwie Perspektywy: Wierszowa vs Kolumnowa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dwie Perspektywy: Wierszowa vs Kolumnowa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-perspektywa-wierszowa-geometryczna-przeciecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Perspektywa Wierszowa (Geometryczna - Przecięcia)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-perspektywa-kolumnowa-kombinacje-liniowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Perspektywa Kolumnowa (Kombinacje Liniowe)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metoda-macierzy-odwrotnej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metoda Macierzy Odwrotnej
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metoda Macierzy Odwrotnej">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-algorytm-postepowania" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Algorytm Postępowania
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-szczegoowy-przykad-2-times-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Szczegółowy przykład (\(2 \times 2\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ograniczenia-i-warunki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Ograniczenia i Warunki
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-wzory-cramera-metoda-wyznacznikow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Wzory Cramera (Metoda Wyznaczników)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Wzory Cramera (Metoda Wyznaczników)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicja-formalna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Definicja Formalna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-rozbudowany-przykad-3-times-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Rozbudowany przykład (\(3 \times 3\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-metoda-eliminacji-gaussa-najpotezniejsze-narzedzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Metoda Eliminacji Gaussa (Najpotężniejsze Narzędzie)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Metoda Eliminacji Gaussa (Najpotężniejsze Narzędzie)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-idea-macierzy-schodkowej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Idea Macierzy Schodkowej
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-analiza-typow-rozwiazan-rzad-macierzy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Analiza typów rozwiązań (Rząd Macierzy)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Analiza typów rozwiązań (Rząd Macierzy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-a-ukad-oznaczony-jedno-rozwiazanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK A: Układ Oznaczony (Jedno rozwiązanie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-b-ukad-sprzeczny-brak-rozwiazan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK B: Układ Sprzeczny (Brak rozwiązań)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-c-ukad-nieoznaczony-nieskonczenie-wiele-rozwiazan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK C: Układ Nieoznaczony (Nieskończenie wiele rozwiązań)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wielkie-porownanie-metod-kiedy-uzyc-ktorej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Wielkie Porównanie Metod: Kiedy użyć której?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Wielkie Porównanie Metod: Kiedy użyć której?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wnioski-koncowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wnioski końcowe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometria
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wektory.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wektory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Iloczyny.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iloczyny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geometria_analityczna.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria-analityczna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-fundamenty-od-rownan-do-struktury-axb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Fundamenty: Od Równań do Struktury \(Ax=b\)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Fundamenty: Od Równań do Struktury \(Ax=b\)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-ewolucja-zapisu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1. Ewolucja zapisu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-geboka-analiza-skadnikow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2. Głęboka analiza składników
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2. Głęboka analiza składników">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#macierz-wspoczynnikow-a-operator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macierz Współczynników \(A\) (Operator)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wektor-niewiadomych-x-input" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wektor Niewiadomych \(x\) (Input)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wektor-wyrazow-wolnych-b-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wektor Wyrazów Wolnych \(b\) (Output)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-dwie-perspektywy-wierszowa-vs-kolumnowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Dwie Perspektywy: Wierszowa vs Kolumnowa
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Dwie Perspektywy: Wierszowa vs Kolumnowa">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-perspektywa-wierszowa-geometryczna-przeciecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Perspektywa Wierszowa (Geometryczna - Przecięcia)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-perspektywa-kolumnowa-kombinacje-liniowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Perspektywa Kolumnowa (Kombinacje Liniowe)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metoda-macierzy-odwrotnej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metoda Macierzy Odwrotnej
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metoda Macierzy Odwrotnej">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-algorytm-postepowania" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1. Algorytm Postępowania
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-szczegoowy-przykad-2-times-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2. Szczegółowy przykład (\(2 \times 2\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-ograniczenia-i-warunki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3. Ograniczenia i Warunki
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-wzory-cramera-metoda-wyznacznikow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Wzory Cramera (Metoda Wyznaczników)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Wzory Cramera (Metoda Wyznaczników)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-definicja-formalna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Definicja Formalna
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-rozbudowany-przykad-3-times-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Rozbudowany przykład (\(3 \times 3\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-metoda-eliminacji-gaussa-najpotezniejsze-narzedzie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Metoda Eliminacji Gaussa (Najpotężniejsze Narzędzie)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Metoda Eliminacji Gaussa (Najpotężniejsze Narzędzie)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-idea-macierzy-schodkowej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Idea Macierzy Schodkowej
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-analiza-typow-rozwiazan-rzad-macierzy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Analiza typów rozwiązań (Rząd Macierzy)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Analiza typów rozwiązań (Rząd Macierzy)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-a-ukad-oznaczony-jedno-rozwiazanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK A: Układ Oznaczony (Jedno rozwiązanie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-b-ukad-sprzeczny-brak-rozwiazan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK B: Układ Sprzeczny (Brak rozwiązań)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przypadek-c-ukad-nieoznaczony-nieskonczenie-wiele-rozwiazan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PRZYPADEK C: Układ Nieoznaczony (Nieskończenie wiele rozwiązań)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-wielkie-porownanie-metod-kiedy-uzyc-ktorej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Wielkie Porównanie Metod: Kiedy użyć której?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Wielkie Porównanie Metod: Kiedy użyć której?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wnioski-koncowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wnioski końcowe
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="ukady-rownan-liniowych-i-algebra-macierzy">Układy Równań Liniowych i Algebra Macierzy</h1>
+<p>Niniejsza notatka stanowi kompletny przewodnik po teorii układów równań liniowych w ujęciu algebry liniowej. Przechodzimy tutaj od szkolnych podstaw do akademickiego zrozumienia przestrzeni, transformacji i algorytmów.</p>
+<hr />
+<h2 id="1-fundamenty-od-rownan-do-struktury-axb">1. Fundamenty: Od Równań do Struktury <span class="arithmatex">\(Ax=b\)</span></h2>
+<h3 id="11-ewolucja-zapisu">1.1. Ewolucja zapisu</h3>
+<p>W szkole średniej uczymy się rozwiązywać układy równań metodą podstawiania lub przeciwnych współczynników. Metody te są skuteczne dla małych układów (2-3 zmienne), ale stają się koszmarem obliczeniowym przy większej liczbie niewiadomych.</p>
+<p>Rozważmy układ trzech równań z trzema niewiadomymi:</p>
+<div class="arithmatex">\[
+\begin{cases}
+{\color{red}1}x + {\color{blue}2}y - {\color{orange}1}z = {\color{green}4} \\
+{\color{red}3}x + {\color{blue}8}y + {\color{orange}2}z = {\color{green}8} \\
+{\color{red}4}x + {\color{blue}9}y - {\color{orange}1}z = {\color{green}13}
+\end{cases}
+\]</div>
+<p>Algebra liniowa proponuje, aby nie patrzeć na to jak na „trzy osobne zdania logiczne”, ale jak na <strong>jedną strukturę</strong>. Separujemy liczby (dane) od symboli (niewiadome).</p>
+<p>Zapiszmy to w postaci macierzowej <span class="arithmatex">\(A \cdot x = b\)</span>:</p>
+<div class="arithmatex">\[
+\underbrace{
+\begin{bmatrix}
+\color{red}1 &amp; \color{blue}2 &amp; \color{orange}-1 \\
+\color{red}3 &amp; \color{blue}8 &amp; \color{orange}2 \\
+\color{red}4 &amp; \color{blue}9 &amp; \color{orange}-1
+\end{bmatrix}
+}_{\text{Macierz } A}
+\cdot
+\underbrace{
+\begin{bmatrix}
+x \\
+y \\
+z
+\end{bmatrix}
+}_{\text{Wektor } x}
+=
+\underbrace{
+\begin{bmatrix}
+\color{green}4 \\
+\color{green}8 \\
+\color{green}{13}
+\end{bmatrix}
+}_{\text{Wektor } b}
+\]</div>
+<h3 id="12-geboka-analiza-skadnikow">1.2. Głęboka analiza składników</h3>
+<h4 id="macierz-wspoczynnikow-a-operator"><strong>Macierz Współczynników <span class="arithmatex">\(A\)</span> (Operator)</strong></h4>
+<p>Macierz <span class="arithmatex">\(A\)</span> to obiekt, który przechowuje informację o <strong>relacjach</strong> między zmiennymi.</p>
+<ul>
+<li><strong>Wymiar:</strong> <span class="arithmatex">\(m \times n\)</span> (gdzie <span class="arithmatex">\(m\)</span> to liczba równań, a <span class="arithmatex">\(n\)</span> to liczba niewiadomych). W naszym przykładzie to macierz kwadratowa <span class="arithmatex">\(3 \times 3\)</span>.</li>
+<li><strong>Interpretacja:</strong> Macierz ta działa jak <strong>operator transformacji</strong>. Przekształca ona przestrzeń wejściową (przestrzeń niewiadomych) w przestrzeń wyjściową (przestrzeń wyników).</li>
+<li><strong>Kolumny macierzy:</strong> Każda kolumna odpowiada jednej zmiennej. Kolumna pierwsza (<span class="arithmatex">\(\color{red}{1, 3, 4}\)</span>) mówi nam, jak zmienna <span class="arithmatex">\(x_1\)</span> wpływa na każde z równań.</li>
+</ul>
+<h4 id="wektor-niewiadomych-x-input"><strong>Wektor Niewiadomych <span class="arithmatex">\(x\)</span> (Input)</strong></h4>
+<p>To wektor poszukiwany. Geometrycznie jest to punkt w <span class="arithmatex">\(n\)</span>-wymiarowej przestrzeni, który po "przemieleniu" przez maszynę <span class="arithmatex">\(A\)</span> da nam wynik <span class="arithmatex">\(b\)</span>.</p>
+<h4 id="wektor-wyrazow-wolnych-b-output"><strong>Wektor Wyrazów Wolnych <span class="arithmatex">\(b\)</span> (Output)</strong></h4>
+<p>To nasz cel. Wektor <span class="arithmatex">\(b\)</span> leży w przestrzeni wyników. Rozwiązanie układu równań sprowadza się do pytania: <em>„Czy wektor <span class="arithmatex">\(b\)</span> można zbudować z kolumn macierzy <span class="arithmatex">\(A\)</span>?”</em>.</p>
+<hr />
+<h2 id="2-dwie-perspektywy-wierszowa-vs-kolumnowa">2. Dwie Perspektywy: Wierszowa vs Kolumnowa</h2>
+<p>Dlaczego zapis macierzowy jest tak potężny? Ponieważ pozwala nam patrzeć na problem na dwa sposoby. Zrozumienie różnicy między nimi to klucz do „oświecenia” w algebrze liniowej.</p>
+<h3 id="21-perspektywa-wierszowa-geometryczna-przeciecia">2.1. Perspektywa Wierszowa (Geometryczna - Przecięcia)</h3>
+<p>Patrząc na wiersze macierzy, każde równanie definiuje <strong>płaszczyznę</strong> (w 3D) lub <strong>prostą</strong> (w 2D).</p>
+<ul>
+<li>Równanie <span class="arithmatex">\(x_1 + 2x_2 - x_3 = 4\)</span> to nieskończona płaszczyzna w przestrzeni trójwymiarowej.</li>
+<li>Szukamy punktu <span class="arithmatex">\((x_1, x_2, x_3)\)</span>, który leży na przecięciu <strong>wszystkich trzech płaszczyzn</strong> jednocześnie.</li>
+<li>Jest to trudne do wyobrażenia w wyższych wymiarach (np. przecięcie dziesięciu 10-wymiarowych hiperpłaszczyzn).</li>
+</ul>
+<h3 id="22-perspektywa-kolumnowa-kombinacje-liniowe">2.2. Perspektywa Kolumnowa (Kombinacje Liniowe)</h3>
+<p>To jest „prawdziwe” spojrzenie algebry liniowej. Mnożenie <span class="arithmatex">\(Ax\)</span> to tak naprawdę <strong>kombinacja liniowa kolumn macierzy <span class="arithmatex">\(A\)</span></strong>:</p>
+<div class="arithmatex">\[
+x_1 \begin{bmatrix} \color{red}1 \\ \color{red}3 \\ \color{red}4 \end{bmatrix} +
+x_2 \begin{bmatrix} \color{blue}2 \\ \color{blue}8 \\ \color{blue}9 \end{bmatrix} +
+x_3 \begin{bmatrix} \color{orange}-1 \\ \color{orange}2 \\ \color{orange}-1 \end{bmatrix} =
+\begin{bmatrix} \color{green}4 \\ \color{green}8 \\ \color{green}{13} \end{bmatrix}
+\]</div>
+<p><strong>Pytanie brzmi:</strong> Ile muszę wziąć wektora czerwonego (<span class="arithmatex">\(x_1\)</span>), ile niebieskiego (<span class="arithmatex">\(x_2\)</span>) i ile pomarańczowego (<span class="arithmatex">\(x_3\)</span>), aby po ich zsumowaniu (metodą równoległoboku/wieloboku) trafić w punkt zielony (<span class="arithmatex">\(b\)</span>)?</p>
+<p><strong>Korzyści tego zapisu:</strong></p>
+<ol>
+<li><strong>Zwięzłość:</strong> Jeden symbol <span class="arithmatex">\(A\)</span> zastępuje setki liczb.</li>
+<li><strong>Operacje algebraiczne:</strong> Możemy przekształcać równania tak prosto, jak liczby (<span class="arithmatex">\(Ax=b \to x=A^{-1}b\)</span>).</li>
+<li><strong>Analiza istnienia rozwiązań:</strong> Jeśli wektor <span class="arithmatex">\(b\)</span> nie leży w przestrzeni rozpiętej przez kolumny <span class="arithmatex">\(A\)</span> (tzw. <em>Column Space</em>), rozwiązanie nie istnieje.</li>
+</ol>
+<hr />
+<h2 id="3-metoda-macierzy-odwrotnej">3. Metoda Macierzy Odwrotnej</h2>
+<p>Metoda ta opiera się na analogii do równania skalarnego <span class="arithmatex">\(ax=b \implies x=a^{-1}b\)</span>. W świecie macierzy dzielenie nie istnieje, ale istnieje <strong>odwracanie</strong>.</p>
+<h3 id="31-algorytm-postepowania">3.1. Algorytm Postępowania</h3>
+<ol>
+<li>Oblicz wyznacznik <span class="arithmatex">\(\det(A)\)</span>. Jeśli wynosi 0, STOP – metoda nie zadziała.</li>
+<li>Wyznacz macierz dopełnień algebraicznych (macierz kofaktorów).</li>
+<li>Transponuj macierz dopełnień (powstaje tzw. macierz dołączona <span class="arithmatex">\(A^D\)</span>).</li>
+<li>Pomnóż macierz dołączoną przez odwrotność wyznacznika.</li>
+<li>Oblicz <span class="arithmatex">\(x = A^{-1} \cdot b\)</span>.</li>
+</ol>
+<h3 id="32-szczegoowy-przykad-2-times-2">3.2. Szczegółowy przykład (<span class="arithmatex">\(2 \times 2\)</span>)</h3>
+<p>Niech <span class="arithmatex">\(A = \begin{bmatrix} 4 &amp; 7 \\ 2 &amp; 6 \end{bmatrix}, \quad b = \begin{bmatrix} -2 \\ 4 \end{bmatrix}\)</span>.</p>
+<ol>
+<li>
+<p><strong>Wyznacznik:</strong>
+    <span class="arithmatex">\(\det(A) = (4 \cdot 6) - (7 \cdot 2) = 24 - 14 = 10\)</span>
+    Jest różny od zera, macierz jest odwracalna.</p>
+</li>
+<li>
+<p><strong>Macierz Odwrotna:</strong>
+    Dla <span class="arithmatex">\(2 \times 2\)</span> zamieniamy elementy na przekątnej i zmieniamy znaki pozostałych:
+    <span class="arithmatex">\(A^{-1} = \frac{1}{10} \begin{bmatrix} 6 &amp; -7 \\ -2 &amp; 4 \end{bmatrix} = \begin{bmatrix} 0.6 &amp; -0.7 \\ -0.2 &amp; 0.4 \end{bmatrix}\)</span></p>
+</li>
+<li>
+<p><strong>Mnożenie <span class="arithmatex">\(x = A^{-1}b\)</span>:</strong>
+    <span class="arithmatex">\(\begin{bmatrix} x_1 \\ x_2 \end{bmatrix} = \begin{bmatrix} 0.6 &amp; -0.7 \\ -0.2 &amp; 0.4 \end{bmatrix} \cdot \begin{bmatrix} -2 \\ 4 \end{bmatrix}\)</span>
+    <span class="arithmatex">\(x_1 = (0.6 \cdot -2) + (-0.7 \cdot 4) = -1.2 - 2.8 = -4\)</span>
+    <span class="arithmatex">\(x_2 = (-0.2 \cdot -2) + (0.4 \cdot 4) = 0.4 + 1.6 = 2\)</span></p>
+</li>
+</ol>
+<p><strong>Wynik:</strong> <span class="arithmatex">\(x = \begin{bmatrix} -4 \\ 2 \end{bmatrix}\)</span>.</p>
+<h3 id="33-ograniczenia-i-warunki">3.3. Ograniczenia i Warunki</h3>
+<ul>
+<li><strong>Warunek konieczny:</strong> Macierz <span class="arithmatex">\(A\)</span> musi być kwadratowa i nieosobliwa (<span class="arithmatex">\(\det(A) \neq 0\)</span>).</li>
+<li><strong>Koszt obliczeniowy:</strong> Obliczanie macierzy odwrotnej dla dużych układów (<span class="arithmatex">\(N &gt; 1000\)</span>) jest niezwykle kosztowne obliczeniowo (<span class="arithmatex">\(O(N^3)\)</span>) i obarczone błędami zaokrągleń komputera. W praktyce inżynierskiej rzadko odwraca się macierze wprost – stosuje się rozkłady (np. LU).</li>
+</ul>
+<hr />
+<h2 id="4-wzory-cramera-metoda-wyznacznikow">4. Wzory Cramera (Metoda Wyznaczników)</h2>
+<p>Metoda Gabriela Cramera jest piękna teoretycznie, ponieważ daje jawny wzór na każdą zmienną. Pozwala obliczyć np. tylko <span class="arithmatex">\(x_{17}\)</span> bez liczenia pozostałych 99 zmiennych.</p>
+<h3 id="41-definicja-formalna">4.1. Definicja Formalna</h3>
+<p>Jeśli <span class="arithmatex">\(\det(A) \neq 0\)</span>, to rozwiązanie układu dane jest wzorami:
+<span class="arithmatex">\(x_k = \frac{\det(A_k)}{\det(A)}\)</span>
+gdzie <span class="arithmatex">\(A_k\)</span> to macierz powstała przez zastąpienie <span class="arithmatex">\(k\)</span>-tej kolumny macierzy <span class="arithmatex">\(A\)</span> wektorem wyrazów wolnych <span class="arithmatex">\(b\)</span>.</p>
+<h3 id="42-rozbudowany-przykad-3-times-3">4.2. Rozbudowany przykład (<span class="arithmatex">\(3 \times 3\)</span>)</h3>
+<p>Wróćmy do naszego układu z początku:
+<span class="arithmatex">\(A = \begin{bmatrix} 1 &amp; 2 &amp; -1 \\ 3 &amp; 8 &amp; 2 \\ 4 &amp; 9 &amp; -1 \end{bmatrix}, \quad b = \begin{bmatrix} 4 \\ 8 \\ 13 \end{bmatrix}\)</span></p>
+<p><strong>Krok 1: Wyznacznik główny <span class="arithmatex">\(W\)</span> (Metoda Sarrusa)</strong>
+Dopisujemy dwie pierwsze kolumny:</p>
+<div class="arithmatex">\[
+\begin{matrix}
+1 &amp; 2 &amp; -1 &amp; | &amp; 1 &amp; 2 \\
+3 &amp; 8 &amp; 2 &amp; | &amp; 3 &amp; 8 \\
+4 &amp; 9 &amp; -1 &amp; | &amp; 4 &amp; 9
+\end{matrix}
+\]</div>
+<p><span class="arithmatex">\(W = (1\cdot8\cdot(-1)) + (2\cdot2\cdot4) + ((-1)\cdot3\cdot9) - [((-1)\cdot8\cdot4) + (1\cdot2\cdot9) + (2\cdot3\cdot(-1))]\)</span>
+<span class="arithmatex">\(W = (-8 + 16 - 27) - (-32 + 18 - 6)\)</span>
+<span class="arithmatex">\(W = -19 - (-20) = \mathbf{1}\)</span></p>
+<p><strong>Krok 2: Wyznacznik dla <span class="arithmatex">\(x_1\)</span> (<span class="arithmatex">\(W_{x1}\)</span>)</strong>
+Podmieniamy <strong>pierwszą</strong> kolumnę na wektor <span class="arithmatex">\(b\)</span>:
+<span class="arithmatex">\(A_1 = \begin{bmatrix} \color{green}4 &amp; 2 &amp; -1 \\ \color{green}8 &amp; 8 &amp; 2 \\ \color{green}{13} &amp; 9 &amp; -1 \end{bmatrix}\)</span>
+Licząc analogicznie (Sarrus lub rozwinięcie Laplace'a):
+<span class="arithmatex">\(\det(A_1) = (4\cdot8\cdot(-1)) + (2\cdot2\cdot13) + ((-1)\cdot8\cdot9) - [((-1)\cdot8\cdot13) + (4\cdot2\cdot9) + (2\cdot8\cdot(-1))]\)</span>
+<span class="arithmatex">\(\det(A_1) = (-32 + 52 - 72) - (-104 + 72 - 16)\)</span>
+<span class="arithmatex">\(\det(A_1) = -52 - (-48) = -4\)</span></p>
+<p>Stąd: <strong><span class="arithmatex">\(x_1 = \frac{-4}{1} = -4\)</span></strong>.</p>
+<p><strong>Krok 3: Wyznacznik dla <span class="arithmatex">\(x_2\)</span> (<span class="arithmatex">\(W_{x2}\)</span>)</strong>
+Podmieniamy <strong>drugą</strong> kolumnę na wektor <span class="arithmatex">\(b\)</span>:
+<span class="arithmatex">\(A_2 = \begin{bmatrix} 1 &amp; \color{green}4 &amp; -1 \\ 3 &amp; \color{green}8 &amp; 2 \\ 4 &amp; \color{green}{13} &amp; -1 \end{bmatrix}\)</span>
+Po obliczeniach: <span class="arithmatex">\(\det(A_2) = 6\)</span>.
+Stąd: <strong><span class="arithmatex">\(x_2 = \frac{6}{1} = 6\)</span></strong>.</p>
+<p><strong>Krok 4: Wyznacznik dla <span class="arithmatex">\(x_3\)</span> (<span class="arithmatex">\(W_{x3}\)</span>)</strong>
+Podmieniamy <strong>trzecią</strong> kolumnę:
+<span class="arithmatex">\(A_3 = \begin{bmatrix} 1 &amp; 2 &amp; \color{green}4 \\ 3 &amp; 8 &amp; \color{green}8 \\ 4 &amp; 9 &amp; \color{green}{13} \end{bmatrix}\)</span>
+Po obliczeniach: <span class="arithmatex">\(\det(A_3) = 4\)</span>.
+Stąd: <strong><span class="arithmatex">\(x_3 = \frac{4}{1} = 4\)</span></strong>.</p>
+<p><strong>Rozwiązanie:</strong> <span class="arithmatex">\(x = (-4, 6, 4)\)</span>.</p>
+<hr />
+<h2 id="5-metoda-eliminacji-gaussa-najpotezniejsze-narzedzie">5. Metoda Eliminacji Gaussa (Najpotężniejsze Narzędzie)</h2>
+<p>Podczas gdy Cramer i Macierz Odwrotna są "eleganckie", Gauss jest "roboczy" i uniwersalny. To algorytm, który systematycznie upraszcza macierz, nie dbając o to, czy wyznacznik jest zerem.</p>
+<h3 id="51-idea-macierzy-schodkowej">5.1. Idea Macierzy Schodkowej</h3>
+<p>Celem jest doprowadzenie macierzy do postaci, w której pod „przekątną” (schodkami) są same zera. Pozwala to na rozwiązanie układu metodą „podstawiania wstecznego” (back substitution).</p>
+<p>Operacje dozwolone (operacje elementarne na wierszach - ERO):</p>
+<ol>
+<li><span class="arithmatex">\(R_i \leftrightarrow R_j\)</span> (Zamiana wierszy).</li>
+<li><span class="arithmatex">\(k \cdot R_i\)</span> (Skalowanie wiersza).</li>
+<li><span class="arithmatex">\(R_i + k \cdot R_j\)</span> (Dodanie do wiersza wielokrotności innego).</li>
+</ol>
+<h3 id="52-analiza-typow-rozwiazan-rzad-macierzy">5.2. Analiza typów rozwiązań (Rząd Macierzy)</h3>
+<p>Kluczem do zrozumienia Gaussa jest pojęcie <strong>Rzędu Macierzy (Rank)</strong>. Rząd to liczba liniowo niezależnych wierszy (schodków) po redukcji.</p>
+<p>Oznaczmy:</p>
+<ul>
+<li><span class="arithmatex">\(r(A)\)</span> – rząd macierzy współczynników.</li>
+<li><span class="arithmatex">\(r(U)\)</span> – rząd macierzy uzupełnionej (razem z kolumną <span class="arithmatex">\(b\)</span>).</li>
+<li><span class="arithmatex">\(n\)</span> – liczba niewiadomych.</li>
+</ul>
+<p>Twierdzenie Kroneckera-Capellego w praktyce:</p>
+<h4 id="przypadek-a-ukad-oznaczony-jedno-rozwiazanie"><strong>PRZYPADEK A: Układ Oznaczony (Jedno rozwiązanie)</strong></h4>
+<p>Warunek: <span class="arithmatex">\(r(A) = r(U) = n\)</span>.
+Ostatni wiersz ma postać:
+<span class="arithmatex">\([\begin{array}{ccc|c} 0 &amp; 0 &amp; \mathbf{5} &amp; 10 \end{array}] \implies 5z = 10 \implies z=2\)</span>
+Każda zmienna ma swój "schodek". Układ jest stabilny.</p>
+<h4 id="przypadek-b-ukad-sprzeczny-brak-rozwiazan"><strong>PRZYPADEK B: Układ Sprzeczny (Brak rozwiązań)</strong></h4>
+<p>Warunek: <span class="arithmatex">\(r(A) &lt; r(U)\)</span>.
+Występuje „schodek” w kolumnie wyrazów wolnych.
+Przykład po redukcji:</p>
+<div class="arithmatex">\[
+\left[ \begin{array}{ccc|c}
+1 &amp; 2 &amp; 3 &amp; 5 \\
+0 &amp; 4 &amp; 1 &amp; 2 \\
+\color{red}0 &amp; \color{red}0 &amp; \color{red}0 &amp; \color{red}7
+\end{array} \right]
+\]</div>
+<p><strong>Analiza:</strong> Ostatni wiersz oznacza równanie: <span class="arithmatex">\(0x_1 + 0x_2 + 0x_3 = 7\)</span>, czyli <span class="arithmatex">\(0 = 7\)</span>.
+To jest <strong>fałsz</strong>. Oznacza to, że nasze wymagania są sprzeczne (np. szukamy punktu przecięcia dwóch równoległych, rozłącznych płaszczyzn).</p>
+<h4 id="przypadek-c-ukad-nieoznaczony-nieskonczenie-wiele-rozwiazan"><strong>PRZYPADEK C: Układ Nieoznaczony (Nieskończenie wiele rozwiązań)</strong></h4>
+<p>Warunek: <span class="arithmatex">\(r(A) = r(U) &lt; n\)</span>.
+Tracimy jeden lub więcej wierszy (zerują się całkowicie).
+Przykład po redukcji:</p>
+<div class="arithmatex">\[
+\left[ \begin{array}{ccc|c}
+1 &amp; 2 &amp; 3 &amp; 5 \\
+0 &amp; 4 &amp; 1 &amp; 2 \\
+\color{blue}0 &amp; \color{blue}0 &amp; \color{blue}0 &amp; \color{blue}0
+\end{array} \right]
+\]</div>
+<p><strong>Analiza:</strong> Ostatni wiersz to <span class="arithmatex">\(0=0\)</span>. Jest to prawda (tautologia), ale nie daje informacji.
+Mamy efektywnie 2 równania na 3 niewiadome.
+Musimy wprowadzić <strong>parametr</strong>.
+Niech <span class="arithmatex">\(x_3 = t\)</span> (gdzie <span class="arithmatex">\(t \in \mathbb{R}\)</span>).
+Wtedy z drugiego wiersza: <span class="arithmatex">\(4x_2 + t = 2 \implies x_2 = \frac{2-t}{4}\)</span>.
+Rozwiązaniem jest cała prosta w przestrzeni 3D.</p>
+<hr />
+<h2 id="6-wielkie-porownanie-metod-kiedy-uzyc-ktorej">6. Wielkie Porównanie Metod: Kiedy użyć której?</h2>
+<p>Poniższa tabela pomoże Ci podjąć decyzję w zależności od problemu, z którym się mierzysz.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Kryterium</th>
+<th style="text-align: left;">Metoda Macierzy Odwrotnej (<span class="arithmatex">\(X=A^{-1}B\)</span>)</th>
+<th style="text-align: left;">Wzory Cramera (Wyznaczniki)</th>
+<th style="text-align: left;">Metoda Eliminacji Gaussa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Typ układu</strong></td>
+<td style="text-align: left;">Tylko kwadratowe (<span class="arithmatex">\(N=M\)</span>)</td>
+<td style="text-align: left;">Tylko kwadratowe (<span class="arithmatex">\(N=M\)</span>)</td>
+<td style="text-align: left;">Dowolne (kwadratowe, prostokątne)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wymóg</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(\det(A) \neq 0\)</span></td>
+<td style="text-align: left;"><span class="arithmatex">\(\det(A) \neq 0\)</span></td>
+<td style="text-align: left;">Brak (działa zawsze)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Złożoność</strong></td>
+<td style="text-align: left;"><span class="arithmatex">\(O(n^3)\)</span> (bardzo wolna)</td>
+<td style="text-align: left;"><span class="arithmatex">\(O(n! \cdot n)\)</span> (eksplozja kombinatoryczna)</td>
+<td style="text-align: left;"><span class="arithmatex">\(O(n^3)\)</span> (najszybszy standard)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wygoda ręczna</strong></td>
+<td style="text-align: left;">Dobra dla <span class="arithmatex">\(2 \times 2\)</span></td>
+<td style="text-align: left;">Dobra dla <span class="arithmatex">\(3 \times 3\)</span>, tragiczna wyżej</td>
+<td style="text-align: left;">Najlepsza dla dużych układów</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Zastosowanie</strong></td>
+<td style="text-align: left;">Równania macierzowe <span class="arithmatex">\(AX=B\)</span>, teoria grup</td>
+<td style="text-align: left;">Fizyka teoretyczna, wyprowadzanie wzorów</td>
+<td style="text-align: left;">Algorytmy komputerowe, inżynieria</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wykrywanie sprzeczności</strong></td>
+<td style="text-align: left;">Niemożliwe (dzielenie przez zero)</td>
+<td style="text-align: left;">Niemożliwe (dzielenie przez zero)</td>
+<td style="text-align: left;"><strong>Intuicyjne</strong> (widzisz wiersz <span class="arithmatex">\(0=k\)</span>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="wnioski-koncowe">Wnioski końcowe</h3>
+<ol>
+<li>Uczysz się <strong>Cramera</strong>, aby zrozumieć definicje i zdać egzamin z teorii.</li>
+<li>Uczysz się <strong>Macierzy Odwrotnej</strong>, aby umieć przekształcać skomplikowane wzory algebraiczne.</li>
+<li>Uczysz się <strong>Eliminacji Gaussa</strong>, aby rozwiązywać rzeczywiste problemy. To Gauss jest tym algorytmem, który "siedzi w środku" programów takich jak MATLAB, Python (NumPy) czy w silnikach gier 3D.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="js/katex-render.js"></script>
+      
+    
+  </body>
+</html>

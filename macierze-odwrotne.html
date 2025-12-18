@@ -1,0 +1,1487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="Wyznaczniki.html">
+      
+      
+        <link rel="next" href="r%C3%B3wnania-w-jezyku-macierzy.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Macierze-odwrotne - Notatki z Matematyki</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#macierze-odwrotne" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Notatki z Matematyki" class="md-header__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notatki z Matematyki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Macierze-odwrotne
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Notatki z Matematyki" class="md-nav__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Notatki z Matematyki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macierze.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Wyznaczniki.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wyznaczniki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze-odwrotne
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="macierze-odwrotne.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze-odwrotne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wstęp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wstęp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-nie-mozemy-dzielic-macierzy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚫 Dlaczego nie możemy dzielić macierzy?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-koncepcja-i-intuicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Koncepcja i Intuicja
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Koncepcja i Intuicja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#czym-jest-macierz-odwrotna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Czym jest macierz odwrotna?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kluczowa-definicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kluczowa definicja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macierz-osobliwa-vs-nieosobliwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macierz Osobliwa vs Nieosobliwa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-odwracamy-tylko-macierze-kwadratowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Dlaczego odwracamy TYLKO macierze kwadratowe?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Dlaczego odwracamy TYLKO macierze kwadratowe?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-powod-geometryczny-utrata-informacji-efekt-zdjecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Powód Geometryczny: Utrata informacji (Efekt "Zdjęcia")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-powod-algebraiczny-w-obie-strony-to-samo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Powód Algebraiczny: "W obie strony to samo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-powod-ze-wzoru-brak-wyznacznika" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Powód ze Wzoru (Brak Wyznacznika)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metoda-i-metoda-dopenien-algebraicznych-wyznacznikowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Metoda I: Metoda Dopełnień Algebraicznych (Wyznacznikowa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Metoda I: Metoda Dopełnień Algebraicznych (Wyznacznikowa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wzor-ogolny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wzór ogólny
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorytm-krok-po-kroku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorytm krok po kroku
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przykad-praktyczny-metoda-dopenien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Przykład Praktyczny (Metoda Dopełnień)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metoda-ii-eliminacja-gaussa-jordana-bezwyznacznikowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metoda II: Eliminacja Gaussa-Jordana (Bezwyznacznikowa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metoda II: Eliminacja Gaussa-Jordana (Bezwyznacznikowa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-metody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea metody
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dozwolone-operacje-elementarne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dozwolone Operacje Elementarne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przykad-praktyczny-gauss-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Przykład Praktyczny (Gauss-Jordan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-zastosowania-macierzy-odwrotnej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Zastosowania Macierzy Odwrotnej
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Zastosowania Macierzy Odwrotnej">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rozwiazywanie-ukadow-rownan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rozwiązywanie Układów Równań
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-implementacja-w-pythonie-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Implementacja w Pythonie (NumPy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="r%C3%B3wnania-w-jezyku-macierzy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Równania w języku macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometria
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wektory.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wektory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Iloczyny.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iloczyny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geometria_analityczna.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria-analityczna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#wstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wstęp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Wstęp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-nie-mozemy-dzielic-macierzy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚫 Dlaczego nie możemy dzielić macierzy?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-koncepcja-i-intuicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Koncepcja i Intuicja
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Koncepcja i Intuicja">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#czym-jest-macierz-odwrotna" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Czym jest macierz odwrotna?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kluczowa-definicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kluczowa definicja
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macierz-osobliwa-vs-nieosobliwa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Macierz Osobliwa vs Nieosobliwa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-odwracamy-tylko-macierze-kwadratowe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Dlaczego odwracamy TYLKO macierze kwadratowe?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Dlaczego odwracamy TYLKO macierze kwadratowe?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-powod-geometryczny-utrata-informacji-efekt-zdjecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Powód Geometryczny: Utrata informacji (Efekt "Zdjęcia")
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-powod-algebraiczny-w-obie-strony-to-samo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Powód Algebraiczny: "W obie strony to samo"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-powod-ze-wzoru-brak-wyznacznika" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Powód ze Wzoru (Brak Wyznacznika)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-metoda-i-metoda-dopenien-algebraicznych-wyznacznikowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Metoda I: Metoda Dopełnień Algebraicznych (Wyznacznikowa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Metoda I: Metoda Dopełnień Algebraicznych (Wyznacznikowa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wzor-ogolny" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wzór ogólny
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorytm-krok-po-kroku" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Algorytm krok po kroku
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przykad-praktyczny-metoda-dopenien" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Przykład Praktyczny (Metoda Dopełnień)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-metoda-ii-eliminacja-gaussa-jordana-bezwyznacznikowa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Metoda II: Eliminacja Gaussa-Jordana (Bezwyznacznikowa)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Metoda II: Eliminacja Gaussa-Jordana (Bezwyznacznikowa)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#idea-metody" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Idea metody
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dozwolone-operacje-elementarne" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dozwolone Operacje Elementarne
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#przykad-praktyczny-gauss-jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎓 Przykład Praktyczny (Gauss-Jordan)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-zastosowania-macierzy-odwrotnej" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Zastosowania Macierzy Odwrotnej
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Zastosowania Macierzy Odwrotnej">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-rozwiazywanie-ukadow-rownan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A. Rozwiązywanie Układów Równań
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-implementacja-w-pythonie-numpy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B. Implementacja w Pythonie (NumPy)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="macierze-odwrotne">Macierze Odwrotne</h1>
+<h2 id="wstep">Wstęp</h2>
+<p>W arytmetyce liczb rzeczywistych, jeśli mamy równanie <span class="arithmatex">\(5 \cdot x = 10\)</span>, to intuicyjnie dzielimy obie strony przez 5, aby otrzymać <span class="arithmatex">\(x = 2\)</span>.
+Ale w świecie macierzy <strong>dzielenie nie istnieje</strong>. Nie możemy po prostu napisać <span class="arithmatex">\(\frac{A}{B}\)</span>.</p>
+<h3 id="dlaczego-nie-mozemy-dzielic-macierzy">🚫 Dlaczego nie możemy dzielić macierzy?</h3>
+<p>Może Cię kusić, aby zapisać <span class="arithmatex">\(X = \frac{B}{A}\)</span>, ale w algebrze liniowej taki zapis jest <strong>surowo zabroniony</strong>. Wynika to z trzech głównych powodów:</p>
+<p><strong>A. Problem Przemienności (Lewo vs Prawo)</strong>
+W liczbach kolejność mnożenia nie ma znaczenia (<span class="arithmatex">\(2 \cdot 5 = 10\)</span> i <span class="arithmatex">\(5 \cdot 2 = 10\)</span>).
+W macierzach mnożenie <strong>nie jest przemienne</strong> (<span class="arithmatex">\(A \cdot B \neq B \cdot A\)</span>).
+Gdybyśmy napisali "podziel <span class="arithmatex">\(B\)</span> przez <span class="arithmatex">\(A\)</span>", to byłoby to niejednoznaczne matematycznie. Czy chodzi o:</p>
+<ul>
+<li>Pomnożenie przez odwrotność z <strong>lewej</strong> strony? (<span class="arithmatex">\(A^{-1} \cdot B\)</span>)</li>
+<li>Pomnożenie przez odwrotność z <strong>prawej</strong> strony? (<span class="arithmatex">\(B \cdot A^{-1}\)</span>)</li>
+</ul>
+<p>Te dwa działania dają zazwyczaj <strong>zupełnie inne wyniki</strong>! Znak ułamka nie precyzuje, o którą stronę chodzi, dlatego go nie używamy.</p>
+<p><strong>B. Problem "Dzielenia przez Zero" (Macierze Osobliwe)</strong>
+Tak jak nie każdą liczbę można odwrócić (nie istnieje <span class="arithmatex">\(\frac{1}{0}\)</span>), tak samo nie każdą macierz można odwrócić.
+Jeśli macierz ma wyznacznik równy <span class="arithmatex">\(0\)</span> (<span class="arithmatex">\(\det(A) = 0\)</span>), nazywamy ją <strong>macierzą osobliwą</strong>. Próba "dzielenia" przez taką macierz jest błędem matematycznym równoważnym dzieleniu przez zero.</p>
+<p><strong>C. Natura działania</strong>
+W świecie macierzy operacja <span class="arithmatex">\(A^{-1} \cdot B\)</span> to złożenie przekształceń (np. odwrócenie obrotu), a nie arytmetyczne dzielenie wielkości.</p>
+<blockquote>
+<p><strong>Zapamiętaj:</strong>
+Zamiast mówić "dzielę przez <span class="arithmatex">\(A\)</span>", mów zawsze precyzyjnie:</p>
+<ul>
+<li>
+<p>"Mnożę <strong>lewostronnie</strong> przez macierz odwrotną <span class="arithmatex">\(A^{-1}\)</span>" (np. przy rozwiązywaniu <span class="arithmatex">\(A \cdot x = b\)</span> otrzymujemy <span class="arithmatex">\(x = A^{-1} \cdot b\)</span>).</p>
+</li>
+<li>
+<p>lub "Mnożę <strong>prawostronnie</strong> przez macierz odwrotną <span class="arithmatex">\(A^{-1}\)</span>".</p>
+</li>
+</ul>
+</blockquote>
+<p>Zamiast dzielenia, używamy mnożenia przez odwrotność.</p>
+<ul>
+<li>Dla liczb: Zamiast dzielić przez 5, mnożymy przez odwrotność <span class="arithmatex">\(\frac{1}{5}\)</span> (czyli <span class="arithmatex">\(5^{-1}\)</span>).</li>
+<li>Dla macierzy: Zamiast dzielić przez macierz <span class="arithmatex">\(A\)</span>, mnożymy przez <strong>Macierz Odwrotną</strong> <span class="arithmatex">\(A^{-1}\)</span>.</li>
+</ul>
+<hr />
+<h2 id="1-koncepcja-i-intuicja">1. Koncepcja i Intuicja</h2>
+<h3 id="czym-jest-macierz-odwrotna">Czym jest macierz odwrotna?</h3>
+<p>Macierz odwrotna do macierzy <span class="arithmatex">\(A\)</span> (oznaczana jako <span class="arithmatex">\(A^{-1}\)</span>) to taka unikalna macierz, która po pomnożeniu przez <span class="arithmatex">\(A\)</span> daje <strong>Macierz Jednostkową (<span class="arithmatex">\(I\)</span>)</strong>.</p>
+<p>Można to porównać do liczb:</p>
+<ul>
+<li>Liczba: <span class="arithmatex">\(5 \cdot 5^{-1} = 1\)</span></li>
+<li>Macierz: <span class="arithmatex">\(A \cdot A^{-1} = I\)</span></li>
+</ul>
+<blockquote>
+<p><strong>Przypomnienie:</strong> Macierz Jednostkowa (<span class="arithmatex">\(I\)</span>) to macierz z jedynkami na przekątnej i zerami wszędzie indziej. Pełni ona rolę "jedynki" w świecie macierzy.
+$<span class="arithmatex">\(I = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>$</p>
+</blockquote>
+<h3 id="kluczowa-definicja">Kluczowa definicja</h3>
+<p>Macierz <span class="arithmatex">\(B\)</span> jest odwrotna do <span class="arithmatex">\(A\)</span>, jeśli spełniony jest warunek:</p>
+<div class="arithmatex">\[
+ A \cdot B = B \cdot A = I
+\]</div>
+<p>Oznacza to, że mnożenie musi dać wynik jednostkowy niezależnie od kolejności (choć zazwyczaj mnożenie macierzy nie jest przemienne, tutaj jest to wyjątek).</p>
+<h3 id="macierz-osobliwa-vs-nieosobliwa">Macierz Osobliwa vs Nieosobliwa</h3>
+<p>Nie każdą macierz da się odwrócić (tak jak nie można dzielić przez zero).</p>
+<ol>
+<li><strong>Macierz Osobliwa:</strong> To macierz, której wyznacznik wynosi 0 (<span class="arithmatex">\(\det(A) = 0\)</span>). Taka macierz <strong>NIE POSIADA</strong> macierzy odwrotnej. Jest to odpowiednik liczby 0 w mnożeniu.</li>
+<li><strong>Macierz Nieosobliwa:</strong> To macierz, której wyznacznik jest różny od zera (<span class="arithmatex">\(\det(A) \neq 0\)</span>). Taka macierz <strong>POSIADA</strong> macierz odwrotną.</li>
+</ol>
+<blockquote>
+<p><strong>Ważne:</strong> Odwracać możemy TYLKO macierze kwadratowe (<span class="arithmatex">\(2 \times 2, 3 \times 3, \dots\)</span>).</p>
+</blockquote>
+<h3 id="dlaczego-odwracamy-tylko-macierze-kwadratowe">❓ Dlaczego odwracamy TYLKO macierze kwadratowe?</h3>
+<p>To fundamentalne pytanie. Dlaczego nie istnieje odwrotność dla macierzy <span class="arithmatex">\(2 \times 3\)</span> albo <span class="arithmatex">\(10 \times 2\)</span>?
+Powody są trzy: geometryczny, algebraiczny i obliczeniowy.</p>
+<h4 id="1-powod-geometryczny-utrata-informacji-efekt-zdjecia">1. Powód Geometryczny: Utrata informacji (Efekt "Zdjęcia")</h4>
+<p>Macierze to funkcje, które przekształcają przestrzeń.</p>
+<ul>
+<li><strong>Macierz Kwadratowa (<span class="arithmatex">\(n \times n\)</span>):</strong> Przekształca przestrzeń w inną przestrzeń <strong>tego samego wymiaru</strong> (np. 3D <span class="arithmatex">\(\to\)</span> 3D). Jeśli nie "zgnieciemy" przestrzeni do zera (czyli <span class="arithmatex">\(\det \neq 0\)</span>), to każdy punkt ma swoje unikalne miejsce i możemy wrócić do punktu wyjścia.</li>
+<li><strong>Macierz Prostokątna (<span class="arithmatex">\(m \times n\)</span>):</strong> Zmienia wymiar przestrzeni.</li>
+<li>Np. macierz <span class="arithmatex">\(2 \times 3\)</span> rzutuje świat 3D na płaszczyznę 2D. To jak zrobienie zdjęcia: trójwymiarowy budynek staje się płaskim obrazkiem.</li>
+<li><strong>Problem:</strong> Na podstawie płaskiego zdjęcia nie da się idealnie odtworzyć głębi budynku. Informacja została bezpowrotnie utracona ("spłaszczona"). Nie ma drogi powrotnej – dlatego nie ma macierzy odwrotnej.</li>
+</ul>
+<h4 id="2-powod-algebraiczny-w-obie-strony-to-samo">2. Powód Algebraiczny: "W obie strony to samo"</h4>
+<p>Definicja macierzy odwrotnej jest bardzo surowa. Macierz <span class="arithmatex">\(B\)</span> jest odwrotnością <span class="arithmatex">\(A\)</span> tylko wtedy, gdy działa w <strong>obie strony</strong>:</p>
+<div class="arithmatex">\[
+A \cdot B = I \quad \text{ORAZ} \quad B \cdot A = I
+\]</div>
+<p>Rozważmy macierz prostokątną <span class="arithmatex">\(A\)</span> o wymiarach <span class="arithmatex">\(2 \times 3\)</span>.
+Aby mnożenie było w ogóle możliwe, potencjalna "odwrotność" <span class="arithmatex">\(B\)</span> musiałaby mieć wymiary <span class="arithmatex">\(3 \times 2\)</span>.
+Sprawdźmy, co się stanie:</p>
+<ol>
+<li><strong>Mnożenie <span class="arithmatex">\(A \cdot B\)</span>:</strong>
+    <span class="arithmatex">\((2 \times \mathbf{3}) \cdot (\mathbf{3} \times 2) \rightarrow\)</span> Wynik to macierz <span class="arithmatex">\(2 \times 2\)</span> (Mała macierz jednostkowa <span class="arithmatex">\(I_2\)</span>).</li>
+<li><strong>Mnożenie <span class="arithmatex">\(B \cdot A\)</span>:</strong>
+    <span class="arithmatex">\((3 \times \mathbf{2}) \cdot (\mathbf{2} \times 3) \rightarrow\)</span> Wynik to macierz <span class="arithmatex">\(3 \times 3\)</span> (Duża macierz jednostkowa <span class="arithmatex">\(I_3\)</span>).</li>
+</ol>
+<p><strong>Wniosek:</strong> Skoro <span class="arithmatex">\(I_2 \neq I_3\)</span>, to warunek <span class="arithmatex">\(A \cdot B = B \cdot A\)</span> nigdy nie może być spełniony. Dlatego "prawdziwa" odwrotność nie istnieje.</p>
+<h4 id="3-powod-ze-wzoru-brak-wyznacznika">3. Powód ze Wzoru (Brak Wyznacznika)</h4>
+<p>Najprostszy powód wynika z samej metody obliczania</p>
+<div class="arithmatex">\[
+A^{-1} = \frac{1}{\det(A)} \cdot (A^D)^T
+\]</div>
+<p>We wzorze musimy podzielić przez wyznacznik.
+Z definicji <strong>wyznacznik liczymy tylko dla macierzy kwadratowych</strong>.
+Dla macierzy prostokątnej wyznacznik nie istnieje, więc nie mamy przez co "podzielić".</p>
+<hr />
+<hr />
+<h2 id="2-metoda-i-metoda-dopenien-algebraicznych-wyznacznikowa">2. Metoda I: Metoda Dopełnień Algebraicznych (Wyznacznikowa)</h2>
+<p>Jest to klasyczna, "wzoryczna" metoda znajdowania macierzy odwrotnej. Jest idealna dla małych macierzy (<span class="arithmatex">\(2 \times 2\)</span>, czasem <span class="arithmatex">\(3 \times 3\)</span>), ale bardzo pracochłonna dla większych.</p>
+<h3 id="wzor-ogolny">Wzór ogólny</h3>
+<div class="arithmatex">\[
+ A^{-1} = \frac{1}{\det(A)} \cdot (A^D)^T
+\]</div>
+<p>Gdzie:</p>
+<ul>
+<li><span class="arithmatex">\(\det(A)\)</span> – wyznacznik macierzy <span class="arithmatex">\(A\)</span>.</li>
+<li><span class="arithmatex">\((A^D)^T\)</span> – transponowana macierz dopełnień algebraicznych (nazywana też <strong>Macierzą Dołączoną</strong> <span class="arithmatex">\(A^{adj}\)</span>).</li>
+</ul>
+<h3 id="algorytm-krok-po-kroku">Algorytm krok po kroku</h3>
+<p>Proces składa się z 5 dokładnych kroków. Przeanalizujmy je teoretycznie, a potem na przykładzie.</p>
+<ol>
+<li><strong>Oblicz Wyznacznik (<span class="arithmatex">\(\det(A)\)</span>):</strong> Sprawdź, czy jest różny od zera. Jeśli wyjdzie 0, kończymy zadanie – macierz odwrotna nie istnieje.</li>
+<li><strong>Stwórz Macierz Minorów:</strong> Dla każdego pola macierzy oblicz wyznacznik po skreśleniu jego wiersza i kolumny.</li>
+<li><strong>Stwórz Macierz Dopełnień (Szachownica):</strong> Nałóż na macierz minorów znaki plus/minus zgodnie z zasadą "szachownicy" (<span class="arithmatex">\((-1)^{i+j}\)</span>).</li>
+<li><strong>Transpozycja (Macierz Dołączona):</strong> Zamień wiersze na kolumny w macierzy dopełnień.</li>
+<li><strong>Mnożenie:</strong> Pomnóż każdy element powstałej macierzy przez ułamek <span class="arithmatex">\(\frac{1}{\det(A)}\)</span>.</li>
+</ol>
+<hr />
+<h3 id="przykad-praktyczny-metoda-dopenien">🎓 Przykład Praktyczny (Metoda Dopełnień)</h3>
+<p>Weźmy macierz <span class="arithmatex">\(A\)</span> z pliku źródłowego:</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{bmatrix} \]</div>
+<p><strong>Krok 1: Obliczamy wyznacznik</strong>
+<span class="arithmatex">\(\det(A) = (2 \cdot 3) - (1 \cdot 5) = 6 - 5 = 1\)</span>
+Wyznacznik wynosi 1 (różny od zera), więc macierz odwrotna istnieje.</p>
+<p><strong>Krok 2 i 3: Minory i Dopełnienia</strong>
+Dla macierzy <span class="arithmatex">\(2 \times 2\)</span> jest to proste:</p>
+<ul>
+<li>Dla elementu 2 (skreślamy wiersz 1, kol 1) <span class="arithmatex">\(\to\)</span> zostaje 3. Znak (+) <span class="arithmatex">\(\to\)</span> <strong>3</strong>.</li>
+<li>Dla elementu 1 (skreślamy wiersz 1, kol 2) <span class="arithmatex">\(\to\)</span> zostaje 5. Znak (-) <span class="arithmatex">\(\to\)</span> <strong>-5</strong>.</li>
+<li>Dla elementu 5 (skreślamy wiersz 2, kol 1) <span class="arithmatex">\(\to\)</span> zostaje 1. Znak (-) <span class="arithmatex">\(\to\)</span> <strong>-1</strong>.</li>
+<li>Dla elementu 3 (skreślamy wiersz 2, kol 2) <span class="arithmatex">\(\to\)</span> zostaje 2. Znak (+) <span class="arithmatex">\(\to\)</span> <strong>2</strong>.</li>
+</ul>
+<p>Macierz dopełnień:</p>
+<div class="arithmatex">\[ A^D = \begin{bmatrix} 3 &amp; -5 \\ -1 &amp; 2 \end{bmatrix} \]</div>
+<p><strong>Krok 4: Transpozycja (Macierz Dołączona)</strong>
+Zamieniamy wiersze z kolumnami w macierzy <span class="arithmatex">\(A^D\)</span>.</p>
+<div class="arithmatex">\[ (A^D)^T = \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix} \]</div>
+<p><strong>Krok 5: Mnożenie przez <span class="arithmatex">\(1/\det(A)\)</span></strong>
+Ponieważ <span class="arithmatex">\(\det(A) = 1\)</span>, mnożymy przez <span class="arithmatex">\(1/1\)</span>, co nic nie zmienia.</p>
+<div class="arithmatex">\[ A^{-1} = \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix} \]</div>
+<blockquote>
+<p><strong>Sprawdzenie:</strong>
+Pomnóżmy <span class="arithmatex">\(A \cdot A^{-1}\)</span>:
+$<span class="arithmatex">\(\begin{bmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{bmatrix} \cdot \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix} = \begin{bmatrix} (6-5) &amp; (-2+2) \\ (15-15) &amp; (-5+6) \end{bmatrix} = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}\)</span>$
+Wynik to <span class="arithmatex">\(I\)</span>. Obliczenia są poprawne!</p>
+</blockquote>
+<hr />
+<h2 id="3-metoda-ii-eliminacja-gaussa-jordana-bezwyznacznikowa">3. Metoda II: Eliminacja Gaussa-Jordana (Bezwyznacznikowa)</h2>
+<p>Ta metoda jest bardziej "algorytmiczna". Jest powszechnie stosowana w komputerach i przy większych macierzach, ponieważ wymaga mniej mnożeń niż metoda wyznacznikowa.</p>
+<h3 id="idea-metody">Idea metody</h3>
+<p>Nie liczymy wyznacznika ani minorów. Zamiast tego budujemy <strong>Macierz Rozszerzoną</strong> (blokową):</p>
+<div class="arithmatex">\[ [ A \mid I ] \]</div>
+<p>Po lewej stronie mamy naszą macierz, po prawej macierz jednostkową.
+Nasz cel to za pomocą <strong>Operacji Elementarnych na Wierszach</strong> przekształcić lewą stronę w macierz jednostkową. Wtedy prawa strona "magicznie" zamieni się w macierz odwrotną.</p>
+<div class="arithmatex">\[ [ A \mid I ] \xrightarrow{\text{Operacje wierszowe}} [ I \mid A^{-1} ] \]</div>
+<h3 id="dozwolone-operacje-elementarne">Dozwolone Operacje Elementarne</h3>
+<ol>
+<li>Zamiana dwóch wierszy miejscami.</li>
+<li>Pomnożenie wiersza przez liczbę różną od zera.</li>
+<li>Dodanie do jednego wiersza innego wiersza pomnożonego przez liczbę (najważniejsza operacja!).</li>
+</ol>
+<h3 id="przykad-praktyczny-gauss-jordan">🎓 Przykład Praktyczny (Gauss-Jordan)</h3>
+<p>Znajdźmy odwrotność tej samej macierzy:</p>
+<div class="arithmatex">\[ A = \begin{bmatrix} 2 &amp; 1 \\ 5 &amp; 3 \end{bmatrix} \]</div>
+<p><strong>Krok 1: Budujemy macierz rozszerzoną <span class="arithmatex">\([A|I]\)</span></strong></p>
+<div class="arithmatex">\[ \left[ \begin{array}{cc|cc} 2 &amp; 1 &amp; 1 &amp; 0 \\ 5 &amp; 3 &amp; 0 &amp; 1 \end{array} \right] \]</div>
+<p><strong>Krok 2: Robimy "jedynkę" w lewym górnym rogu (<span class="arithmatex">\(a_{11}\)</span>)</strong>
+Podzielmy Wiersz 1 przez 2 (<span class="arithmatex">\(W_1 \leftarrow W_1 \cdot 0.5\)</span>):</p>
+<div class="arithmatex">\[ \left[ \begin{array}{cc|cc} 1 &amp; 0.5 &amp; 0.5 &amp; 0 \\ 5 &amp; 3 &amp; 0 &amp; 1 \end{array} \right] \]</div>
+<p><strong>Krok 3: Robimy "zero" pod jedynką (<span class="arithmatex">\(a_{21}\)</span>)</strong>
+Od Wiersza 2 odejmijmy 5 razy Wiersz 1 (<span class="arithmatex">\(W_2 \leftarrow W_2 - 5 \cdot W_1\)</span>):</p>
+<ul>
+<li><span class="arithmatex">\(5 - 5(1) = 0\)</span></li>
+<li><span class="arithmatex">\(3 - 5(0.5) = 3 - 2.5 = 0.5\)</span></li>
+<li><span class="arithmatex">\(0 - 5(0.5) = -2.5\)</span></li>
+<li><span class="arithmatex">\(1 - 5(0) = 1\)</span></li>
+</ul>
+<div class="arithmatex">\[ \left[ \begin{array}{cc|cc} 1 &amp; 0.5 &amp; 0.5 &amp; 0 \\ 0 &amp; 0.5 &amp; -2.5 &amp; 1 \end{array} \right] \]</div>
+<p><strong>Krok 4: Robimy "jedynkę" w prawym dolnym rogu (<span class="arithmatex">\(a_{22}\)</span>)</strong>
+Pomnóżmy Wiersz 2 przez 2 (<span class="arithmatex">\(W_2 \leftarrow W_2 \cdot 2\)</span>):</p>
+<div class="arithmatex">\[ \left[ \begin{array}{cc|cc} 1 &amp; 0.5 &amp; 0.5 &amp; 0 \\ 0 &amp; 1 &amp; -5 &amp; 2 \end{array} \right] \]</div>
+<p><strong>Krok 5: Robimy "zero" nad jedynką (<span class="arithmatex">\(a_{12}\)</span>)</strong>
+Od Wiersza 1 odejmijmy 0.5 raza Wiersz 2 (<span class="arithmatex">\(W_1 \leftarrow W_1 - 0.5 \cdot W_2\)</span>):</p>
+<ul>
+<li><span class="arithmatex">\(1 - 0.5(0) = 1\)</span></li>
+<li><span class="arithmatex">\(0.5 - 0.5(1) = 0\)</span></li>
+<li><span class="arithmatex">\(0.5 - 0.5(-5) = 0.5 + 2.5 = 3\)</span></li>
+<li><span class="arithmatex">\(0 - 0.5(2) = -1\)</span></li>
+</ul>
+<div class="arithmatex">\[ \left[ \begin{array}{cc|cc} \mathbf{1} &amp; \mathbf{0} &amp; \mathbf{3} &amp; \mathbf{-1} \\ \mathbf{0} &amp; \mathbf{1} &amp; \mathbf{-5} &amp; \mathbf{2} \end{array} \right] \]</div>
+<p><strong>Wynik:</strong>
+Po lewej mamy macierz jednostkową <span class="arithmatex">\(I\)</span>. Zatem to, co stoi po prawej, to <span class="arithmatex">\(A^{-1}\)</span>:</p>
+<div class="arithmatex">\[ A^{-1} = \begin{bmatrix} 3 &amp; -1 \\ -5 &amp; 2 \end{bmatrix} \]</div>
+<p>Wynik jest identyczny jak w poprzedniej metodzie!</p>
+<hr />
+<h2 id="4-zastosowania-macierzy-odwrotnej">4. Zastosowania Macierzy Odwrotnej</h2>
+<p>Dlaczego zadajemy sobie tyle trudu, żeby to liczyć?</p>
+<h3 id="a-rozwiazywanie-ukadow-rownan">A. Rozwiązywanie Układów Równań</h3>
+<p>Mamy układ równań zapisany w postaci macierzowej:
+<span class="arithmatex">\(A \cdot x = b\)</span>
+Gdzie <span class="arithmatex">\(A\)</span> to macierz współczynników, <span class="arithmatex">\(x\)</span> to wektor niewiadomych, a <span class="arithmatex">\(b\)</span> to wektor wyników.</p>
+<p>Aby znaleźć <span class="arithmatex">\(x\)</span>, mnożymy obie strony lewostronnie przez <span class="arithmatex">\(A^{-1}\)</span>:
+<span class="arithmatex">\(A^{-1} \cdot A \cdot x = A^{-1} \cdot b\)</span>
+Ponieważ <span class="arithmatex">\(A^{-1} \cdot A = I\)</span>, otrzymujemy:
+<span class="arithmatex">\(I \cdot x = A^{-1} \cdot b\)</span>
+<span class="arithmatex">\(x = A^{-1} \cdot b\)</span></p>
+<p>Metoda ta jest bardzo elegancka teoretycznie, ale dla ogromnych układów (np. 1000 zmiennych) bywa wolna i niestabilna numerycznie.</p>
+<h3 id="b-implementacja-w-pythonie-numpy">B. Implementacja w Pythonie (NumPy)</h3>
+<p>W praktyce inżynierskiej nikt nie liczy odwrotności ręcznie. Używamy bibliotek.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># Definicja macierzy</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+
+<span class="c1"># Obliczenie odwrotności</span>
+<span class="c1"># Funkcja linalg.inv robi całą czarną robotę (zazwyczaj metodą Gaussa)</span>
+<span class="n">A_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Macierz odwrotna:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A_inv</span><span class="p">)</span>
+
+<span class="c1"># Sprawdzenie (Mnożenie macierzy: A @ A_inv)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sprawdzenie (powinno być Identity):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">A</span> <span class="o">@</span> <span class="n">A_inv</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="js/katex-render.js"></script>
+      
+    
+  </body>
+</html>
