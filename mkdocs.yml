@@ -25,25 +25,27 @@ nav:
       - Wyznaczniki: Wyznaczniki.md
       - Macierze-odwrotne: macierze-odwrotne.md
       - Równania w języku macierzy: równania-w-jezyku-macierzy.md
+      
   - Geometria:
       - Wektory: wektory.md
       - Iloczyny: Iloczyny.md
       - Geometria-analityczna: geometria_analityczna.md
 
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
-  - pymdownx.superfences
-  - pymdownx.details
-  - admonition
-  - attr_list
+  
 
 extra_css:
-  - https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css
-  - css/custom.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js
-  - https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js
-  - js/katex-render.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - js/katex.js
+  - js/matrix-calculator.js

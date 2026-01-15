@@ -42,16 +42,20 @@ Iloczyn skalarny spełnia następujące właściwości:
 
 !!! info "Rzut Wektora (Projekcja)"
 Jednym z kluczowych zastosowań iloczynu skalarnego jest obliczanie **rzutu wektora** na inny wektor. Rzut wektora \\(\vec{a}\\) na \\(\vec{b}\\) to "cień", jaki \\(\vec{a}\\) rzuca na linię, wzdłuż której leży \\(\vec{b}\\).Długość tego rzutu (skalar) wynosi:
-\\[\text{comp}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|}\\]
+
+$$
+\text{comp}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|}
+$$
+
 Wektor rzutu obliczamy, mnożąc długość rzutu przez wersor wektora \\(\vec{b}\\):
-\\[
-\text{proj}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|^2} \vec{b}
-\\]
+\[
+\text{proj}\_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|^2} \vec{b}
+\]
 
 Znak iloczynu skalarnego mówi o kącie między wektorami:
 
-- **Wynik > 0:** Kąt jest ostry ( < 90° ). Wektory "wskazują z grubsza w tę samą stronę".
-- **Wynik < 0:** Kąt jest rozwarty ( > 90° ). Wektory "wskazują w przeciwne strony".
+- **Wynik > 0:** Kąt jest ostry (\\(< 90°\\)). Wektory "wskazują z grubsza w tę samą stronę".
+- **Wynik < 0:** Kąt jest rozwarty (\\(> 90°\\)). Wektory "wskazują w przeciwne strony".
 - **Wynik = 0:** Wektory są prostopadłe (ortogonalne).
 
 !!! example "Rozszerzony Przykład"
@@ -134,16 +138,28 @@ Rozwinięcie tego wyznacznika (np. metodą Sarrusa) daje bezpośrednio wartość
 ### Interpretacja Geometryczna: Objętość i Orientacja
 
 !!! info "Objętość Równoległościanu"
-Najważniejszą interpretacją geometryczną iloczynu mieszanego jest objętość. Wartość bezwzględna \\(|(\vec{a} \times \vec{b}) \cdot \vec{c}|\\) jest równa **objętości równoległościanu** rozpiętego na wektorach \\(\vec{a}, \vec{b}, \vec{c}\\).
+
+    Najważniejszą interpretacją geometryczną iloczynu mieszanego jest objętość. Wartość bezwzględna \\(|(\vec{a} \times \vec{b}) \cdot \vec{c}|\\) jest równa **objętości równoległościanu** rozpiętego na wektorach \\(\vec{a}, \vec{b}, \vec{c}\\).
 
     **Dlaczego tak jest?**
-    1.  Długość wektora \\(\|\vec{a} \times \vec{b}\|\\) to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \\(\vec{a}\\) i \\(\vec{b}\\)).
-    2.  Wektor \\(\vec{n} = \vec{a} \times \vec{b}\\) jest prostopadły do tej podstawy.
-    3.  Iloczyn skalarny \\(\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)\\) oblicza rzut wektora \\(\vec{c}\\) na wektor normalny \\(\vec{n}\\). Ten rzut, \\(\|\vec{c}\| \cos(\phi)\\), jest dokładnie wysokością \\(h\\) równoległościanu.
-    4.  Ostatecznie, mnożymy pole podstawy przez wysokość, otrzymując objętość: \\(V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}\\).
+    1.  Długość wektora
+      \\\[\\|\\vec{a} \\times \\vec{b}\\|\\] to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \\(\\vec{a}\\) i \\(\\vec{b}\\)).
+    2.  Wektor
+        \[\vec{n} = \vec{a} \times \vec{b}\]
+        jest prostopadły do tej podstawy.
+    3.  Iloczyn skalarny
+        \[\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)\]
+        oblicza rzut wektora \(\vec{c}\) na wektor normalny \(\vec{n}\). Ten rzut, \(\|\vec{c}\| \cos(\phi)\), jest dokładnie wysokością \(h\) równoległościanu.
+    4.  Ostatecznie, mnożymy pole podstawy przez wysokość, otrzymując objętość:
+        \[V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}\]
 
 !!! info "Orientacja Układu Wektorów"
-Znak iloczynu mieszanego (przed wzięciem wartości bezwzględnej) określa orientację układu wektorów: - **Wynik > 0:** Układ \\((\vec{a}, \vec{b}, \vec{c})\\) jest **prawoskrętny**. Oznacza to, że wektory te zachowują się podobnie do standardowych osi \\((X, Y, Z)\\). - **Wynik < 0:** Układ jest **lewoskrętny**. - **Wynik = 0:** Wektory są **współpłaszczyznowe (koplanarne)**. Nie tworzą one bryły o niezerowej objętości. Jest to najważniejszy test na współpłaszczyznowość.
+
+    Znak iloczynu mieszanego (przed wzięciem wartości bezwzględnej) określa orientację układu wektorów:
+
+    - **Wynik > 0:** Układ \\((\vec{a}, \vec{b}, \vec{c})\\) jest **prawoskrętny**. Oznacza to, że wektory te zachowują się podobnie do standardowych osi \\((X, Y, Z)\\).
+    - **Wynik < 0:** Układ jest **lewoskrętny**.
+    - **Wynik = 0:** Wektory są **współpłaszczyznowe (koplanarne)**. Nie tworzą one bryły o niezerowej objętości. Jest to najważniejszy test na współpłaszczyznowość.
 
 ### Właściwości Algebraiczne
 

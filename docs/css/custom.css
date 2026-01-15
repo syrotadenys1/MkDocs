@@ -93,3 +93,141 @@ a, .md-nav__link, .md-footer a {
 
 /* Improve logo visibility on top bar */
 .md-header__inner img { filter: var(--custom-logo-filter); }
+
+/* Matrix Calculator Styles */
+.matrix-calculator {
+    background-color: var(--custom-panel, #f8f9fb);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.matrix-calculator h2 {
+    margin-top: 0;
+    border-bottom: 2px solid var(--custom-accent, #000);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.matrix-calculator .controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.matrix-calculator .matrix-size-selector,
+.matrix-calculator .operation-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.matrix-calculator .matrix-size-selector input,
+.matrix-calculator .operation-selector select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: var(--custom-bg, #fff);
+    color: var(--custom-fg, #000);
+}
+
+.matrix-calculator .matrices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.matrix-calculator .matrix-container table {
+    border-collapse: collapse;
+}
+
+.matrix-calculator .matrix-container td {
+    padding: 0;
+}
+
+.matrix-calculator .matrix-container input {
+    width: 4em;
+    height: 3em;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: var(--custom-bg, #fff);
+    color: var(--custom-fg, #000);
+    font-size: 1rem;
+}
+
+/* Style for input table borders */
+.matrix-calculator .matrix-container table {
+    border: 2px solid var(--custom-accent, #000);
+    border-radius: 4px;
+    padding: 5px;
+}
+.matrix-calculator .matrix-container tr:first-child td:first-child input { border-top-left-radius: 4px; }
+.matrix-calculator .matrix-container tr:first-child td:last-child input { border-top-right-radius: 4px; }
+.matrix-calculator .matrix-container tr:last-child td:first-child input { border-bottom-left-radius: 4px; }
+.matrix-calculator .matrix-container tr:last-child td:last-child input { border-bottom-right-radius: 4px; }
+
+
+.matrix-calculator button#calculate {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    background-color: var(--custom-top, #0b2545);
+    color: var(--custom-top-fg, #fff);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.matrix-calculator button#calculate:hover {
+    opacity: 0.9;
+}
+
+.matrix-calculator #result-container,
+.matrix-calculator #steps-container {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--custom-bg, #fff);
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.matrix-calculator #result-container h3,
+.matrix-calculator #steps-container h3 {
+    margin-top: 0;
+}
+
+/* Result matrix table */
+#result-container table {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+#result-container td {
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    text-align: center;
+    min-width: 3rem;
+}
+
+/* Step-by-step formatting */
+#steps-container .step {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+}
+#steps-container .step:last-child {
+    border-bottom: none;
+}
+#steps-container code {
+    background-color: rgba(0,0,0,0.08) !important;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+}
