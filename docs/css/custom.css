@@ -94,3 +94,239 @@ a, .md-nav__link, .md-footer a {
 /* Improve logo visibility on top bar */
 .md-header__inner img { filter: var(--custom-logo-filter); }
 
+/* --- MATRIX CALCULATOR FIGMA STYLE --- */
+
+.matrix-calculator-container {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  /* Bardziej techniczny font jak w Figmie */
+  max-width: 900px;
+  margin: 40px auto;
+  color: #000;
+}
+
+/* --- GÓRNE MENU (DROPDOWNS) --- */
+.calc-top-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 50px;
+}
+
+.calc-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* Ukrywamy domyślny wygląd selecta, zostawiamy tekst */
+.clean-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+  padding-right: 25px;
+  /* miejsce na strzałkę */
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.clean-select:focus {
+  outline: none;
+}
+
+/* Własna strzałka (V) */
+.select-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: translateY(-70%) rotate(45deg);
+  pointer-events: none;
+}
+
+/* --- SCENA GŁÓWNA --- */
+.matrix-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centrowanie pionowe znaku X i macierzy */
+  gap: 40px;
+  margin-bottom: 60px;
+  min-height: 200px;
+}
+
+.matrix-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Ważne dla popupu */
+}
+
+/* --- WYMIARY I POPUP --- */
+.dim-label-wrapper {
+  position: relative;
+  margin-bottom: 15px;
+  height: 30px;
+  /* Rezerwacja miejsca */
+}
+
+.dim-clickable {
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.dim-clickable:hover {
+  background-color: #f0f0f0;
+}
+
+/* Popup ukryty domyślnie */
+.dim-popup {
+  display: none;
+  /* JS zmienia na flex/block */
+  position: absolute;
+  top: -50px;
+  /* Nad tekstem 2x2 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 8px;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dim-popup input {
+  width: 40px;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.dim-popup button {
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* --- SIATKA MACIERZY --- */
+.matrix-grid {
+  display: grid;
+  gap: 10px;
+  /* Odstęp między klockami */
+  padding: 10px;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+
+/* KLOCEK (INPUT) - To te szare kwadraty z Figmy */
+.matrix-cell {
+  width: 60px;
+  height: 60px;
+  background: #E5E5E5;
+  /* Jasnoszary z projektu */
+  border: 2px solid transparent;
+  /* Domyślnie brak ramki */
+  border-radius: 12px;
+  /* Zaokrąglenie */
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Aktywny klocek lub hover */
+.matrix-cell:focus {
+  background: #fff;
+  border-color: #000;
+}
+
+/* --- KOLORY STANÓW (RAMKI) --- */
+
+/* Poprawne macierze - zielona ramka wokół inputów */
+.matrix-valid .matrix-cell {
+  border-color: #76FF03;
+  /* Neonowa zieleń z projektu */
+}
+
+/* Błąd wymiarów - czerwona ramka */
+.matrix-error {
+  border-color: #FF5252 !important;
+  background-color: rgba(255, 82, 82, 0.05);
+}
+
+/* ZNAK X */
+.operator-sign {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: 30px;
+  /* Korekta żeby było na równi z macierzami */
+}
+
+/* --- PUDELKO NA KROKI (RESULT BOX) --- */
+.result-box {
+  background: #F4F4F4;
+  /* Bardzo jasny szary */
+  border: 2px solid #9EFF68;
+  /* Jasnozielona ramka */
+  border-radius: 20px;
+  /* Duże zaokrąglenie */
+  padding: 25px;
+  min-height: 150px;
+  position: relative;
+}
+
+.result-header {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.result-content {
+  font-family: 'Times New Roman', serif;
+  /* Do matematyki */
+  font-size: 1.2rem;
+  overflow-x: auto;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+  .matrix-stage {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .operator-sign {
+    margin-top: 0;
+    transform: rotate(90deg);
+    /* X staje się + przy dodawaniu, ale przy mnożeniu ok */
+  }
+}
