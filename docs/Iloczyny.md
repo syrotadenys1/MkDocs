@@ -48,9 +48,10 @@ $$
 $$
 
 Wektor rzutu obliczamy, mnożąc długość rzutu przez wersor wektora \\(\vec{b}\\):
-\[
+
+$$
 \text{proj}\_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|^2} \vec{b}
-\]
+$$
 
 Znak iloczynu skalarnego mówi o kącie między wektorami:
 
@@ -143,15 +144,14 @@ Rozwinięcie tego wyznacznika (np. metodą Sarrusa) daje bezpośrednio wartość
 
     **Dlaczego tak jest?**
     1.  Długość wektora
-      \\\[\\|\\vec{a} \\times \\vec{b}\\|\\] to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \\(\\vec{a}\\) i \\(\\vec{b}\\)).
+      $\\|\\vec{a} \\times \\vec{b}\\|\$ to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \\(\\vec{a}\\) i \\(\\vec{b}\\)).
     2.  Wektor
-        \[\vec{n} = \vec{a} \times \vec{b}\]
-        jest prostopadły do tej podstawy.
+        $\vec{n} = \vec{a} \times \vec{b}\$        jest prostopadły do tej podstawy.
     3.  Iloczyn skalarny
-        \[\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)\]
+        $\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)$
         oblicza rzut wektora \(\vec{c}\) na wektor normalny \(\vec{n}\). Ten rzut, \(\|\vec{c}\| \cos(\phi)\), jest dokładnie wysokością \(h\) równoległościanu.
     4.  Ostatecznie, mnożymy pole podstawy przez wysokość, otrzymując objętość:
-        \[V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}\]
+        $V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}$
 
 !!! info "Orientacja Układu Wektorów"
 
@@ -181,13 +181,14 @@ Rozwijając względem pierwszego wiersza:
 \\]
 Objętość wynosi 24 jednostki sześcienne.
 
-    **2. Sprawdź, czy wektory** \\(\vec{u}=[1,2,3]\\), \\(\vec{v}=[4,5,6]\\), i \\(\vec{w}=[7,8,9]\\) są współpłaszczyznowe.
-    *(To jest przykład z poprzedniej wersji, powtórzony dla kompletności)*
-    \\[
-    (\vec{u}, \vec{v}, \vec{w}) = \begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix}
-    = 1(45-48) - 2(36-42) + 3(32-35) = -3 + 12 - 9 = 0
-    \\]
-    Wynik wynosi 0, zatem wektory są współpłaszczyznowe.
+2. Sprawdź, czy wektory $vec {u} =[1,2,3]$, $vec{v}=[4,5,6]$, i $vec{w}=[7,8,9]$ są współpłaszczyznowe.
+   _(To jest przykład z poprzedniej wersji, powtórzony dla kompletności)_
+   \\[
+   (\vec{u}, \vec{v}, \vec{w}) = \begin{vmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{vmatrix}
+   = 1(45-48) - 2(36-42) + 3(32-35) =
+   -3 + 12 - 9 = 0
+   \\]
+   Wynik wynosi 0, zatem wektory są współpłaszczyznowe.
 
 ---
 

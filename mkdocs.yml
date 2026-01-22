@@ -30,7 +30,8 @@ nav:
       - Wektory: wektory.md
       - Iloczyny: Iloczyny.md
       - Geometria-analityczna: geometria_analityczna.md
-
+  - Rachunek różniczkowy:
+      - Relacje: relacja.md
 
 markdown_extensions:
   - admonition
@@ -49,3 +50,5 @@ extra_javascript:
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
   - js/katex.js
   - js/matrix-calculator.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6 
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
