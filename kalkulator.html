@@ -19,7 +19,7 @@
     
     
       
-        <title>Pochodne - Notatki z Matematyki</title>
+        <title>Kalkulator Macierzy - Notatki z Matematyki</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pochodne" class="md-skip">
+        <a href="#kalkulator-macierzy" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pochodne
+              Kalkulator Macierzy
             
           </span>
         </div>
@@ -690,119 +690,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#definicja" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Definicja
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#przykady" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Przykłady
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#podstawowe-reguy-rozniczkowania" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Podstawowe reguły różniczkowania
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Podstawowe reguły różniczkowania">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#regua-sumy-i-roznicy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reguła sumy i różnicy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regua-iloczynu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reguła iloczynu
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regua-ilorazu" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reguła ilorazu
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#regua-ancuchowa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reguła łańcuchowa
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pochodne-podstawowych-funkcji" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pochodne podstawowych funkcji
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zastosowania-pochodnych" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zastosowania pochodnych
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -818,94 +705,76 @@
 
 
 
-<h1 id="pochodne">Pochodne</h1>
-<h2 id="definicja">Definicja</h2>
-<p>Pochodna funkcji w punkcie opisuje tempo zmian wartości funkcji względem zmiennej. Jeśli funkcja <span class="arithmatex">\(f\)</span> jest zdefiniowana w sąsiedztwie punktu <span class="arithmatex">\(x\)</span>, to jej pochodną w tym punkcie definiuje się jako granicę:</p>
-<div class="arithmatex">\[
-f'(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}
-\]</div>
-<p>Jeżeli granica istnieje, to mówi się, że funkcja jest różniczkowalna w punkcie <span class="arithmatex">\(x\)</span>.</p>
-<h2 id="przykady">Przykłady</h2>
-<p>Dla funkcji <span class="arithmatex">\(f(x)=x^2\)</span> pochodna wynosi <span class="arithmatex">\(f'(x)=2x\)</span>. Ogólny wzór dla potęgi to:</p>
-<div class="arithmatex">\[
-\frac{d}{dx}x^n = n x^{n-1}
-\]</div>
-<h2 id="podstawowe-reguy-rozniczkowania">Podstawowe reguły różniczkowania</h2>
-<h3 id="regua-sumy-i-roznicy">Reguła sumy i różnicy</h3>
-<p>Pochodna sumy (lub różnicy) funkcji jest sumą (lub różnicą) ich pochodnych.</p>
-<div class="arithmatex">\[
-(f(x) \pm g(x))' = f'(x) \pm g'(x)
-\]</div>
-<h3 id="regua-iloczynu">Reguła iloczynu</h3>
-<p>Pochodna iloczynu dwóch funkcji:</p>
-<div class="arithmatex">\[
-(f(x) \cdot g(x))' = f'(x)g(x) + f(x)g'(x)
-\]</div>
-<h3 id="regua-ilorazu">Reguła ilorazu</h3>
-<p>Pochodna ilorazu dwóch funkcji:</p>
-<div class="arithmatex">\[
-\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}
-\]</div>
-<h3 id="regua-ancuchowa">Reguła łańcuchowa</h3>
-<p>Służy do obliczania pochodnej funkcji złożonej.</p>
-<div class="arithmatex">\[
-(f(g(x)))' = f'(g(x)) \cdot g'(x)
-\]</div>
-<h2 id="pochodne-podstawowych-funkcji">Pochodne podstawowych funkcji</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Funkcja <span class="arithmatex">\(f(x)\)</span></th>
-<th style="text-align: left;">Pochodna <span class="arithmatex">\(f'(x)\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(c\)</span> (stała)</td>
-<td style="text-align: left;"><span class="arithmatex">\(0\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(x^n\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(n x^{n-1}\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(e^x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(e^x\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(a^x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(a^x \ln a\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\ln x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{x}\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\log_a x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{x \ln a}\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\sin x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\cos x\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\cos x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(-\sin x\)</span></td>
-</tr>
-<tr>
-<td style="text-align: left;"><span class="arithmatex">\(\tan x\)</span></td>
-<td style="text-align: left;"><span class="arithmatex">\(\frac{1}{\cos^2 x}\)</span></td>
-</tr>
-</tbody>
-</table>
-<h2 id="zastosowania-pochodnych">Zastosowania pochodnych</h2>
-<p>Pochodne są jednym z najważniejszych narzędzi analizy matematycznej i mają szerokie zastosowanie, na przykład do:</p>
-<ul>
-<li><strong>Analizy przebiegu zmienności funkcji:</strong> znajdowanie przedziałów monotoniczności (gdzie funkcja rośnie lub maleje).</li>
-<li><strong>Znajdowania ekstremów lokalnych:</strong> wyznaczanie maksimów i minimów funkcji.</li>
-<li><strong>Obliczania prędkości i przyspieszenia:</strong> w fizyce, pochodna położenia względem czasu to prędkość, a pochodna prędkości to przyspieszenie.</li>
-<li><strong>Aproksymacji funkcji:</strong> przybliżanie skomplikowanych funkcji za pomocą prostszych (np. wielomianów Taylora).</li>
-</ul>
+<h1 id="kalkulator-macierzy">Kalkulator Macierzy</h1>
+<div class="matrix-calculator-container">
+
+    <div class="calc-top-bar">
+        <div class="calc-select-wrapper">
+            <select id="operation-select" class="clean-select">
+                <option value="multiply">Mnożenie macierzy</option>
+                <option value="add">Dodawanie macierzy</option>
+                <option value="det">Wyznacznik macierzy (Det)</option>
+            </select>
+            <span class="select-arrow"></span>
+        </div>
+
+        <div class="calc-select-wrapper" id="method-group">
+            <select id="method-select" class="clean-select">
+                </select>
+            <span class="select-arrow"></span>
+        </div>
+    </div>
+
+    <div class="matrix-stage">
+
+        <div class="matrix-block">
+            <div class="dim-label-wrapper">
+                <span id="dim-a" class="dim-clickable">2 × 2</span>
+                <div class="dim-popup" id="popup-a">
+                    <div class="popup-content">
+                        <input type="number" min="1" max="5" value="2" id="rows-a">
+                        <span>×</span>
+                        <input type="number" min="1" max="5" value="2" id="cols-a">
+                        <button class="apply-dim" data-target="a">OK</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-grid" id="grid-a">
+                </div>
+        </div>
+
+        <div class="operator-sign" id="operator-sign">×</div>
+
+        <div class="matrix-block" id="matrix-b-wrapper">
+            <div class="dim-label-wrapper">
+                <span id="dim-b" class="dim-clickable">2 × 2</span>
+                <div class="dim-popup" id="popup-b">
+                    <div class="popup-content">
+                        <input type="number" min="1" max="5" value="2" id="rows-b">
+                        <span>×</span>
+                        <input type="number" min="1" max="5" value="2" id="cols-b">
+                        <button class="apply-dim" data-target="b">OK</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="matrix-grid" id="grid-b">
+                </div>
+        </div>
+
+    </div>
+
+    <div class="result-box">
+        <div class="result-header">
+            Krok po kroku (<span id="step-method-name">Standard</span>)
+        </div>
+        <div class="result-content" id="steps-output">
+            Wprowadź dane...
+        </div>
+    </div>
+
+</div>
 
 
 

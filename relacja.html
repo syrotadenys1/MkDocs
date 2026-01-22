@@ -1,0 +1,1319 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="geometria_analityczna.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Relacje - Notatki z Matematyki</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#relacje-i-funkcje-analiza-matematycznych-zaleznosci" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="Notatki z Matematyki" class="md-header__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Notatki z Matematyki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Relacje
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m3.55 19.09 1.41 1.41 1.8-1.79-1.42-1.42M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6c0-3.32-2.69-6-6-6m8 7h3v-2h-3m-2.76 7.71 1.8 1.79 1.41-1.41-1.79-1.8M20.45 5l-1.41-1.4-1.8 1.79 1.42 1.42M13 1h-2v3h2M6.76 5.39 4.96 3.6 3.55 5l1.79 1.81zM1 13h3v-2H1m12 9h-2v3h2"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Notatki z Matematyki" class="md-nav__button md-logo" aria-label="Notatki z Matematyki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Notatki z Matematyki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Algebra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Algebra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macierze.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Wyznaczniki.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wyznaczniki
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="macierze-odwrotne.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Macierze-odwrotne
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="r%C3%B3wnania-w-jezyku-macierzy.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Równania w języku macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calc-test.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalkulator macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Geometria
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="wektory.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wektory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Iloczyny.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Iloczyny
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="geometria_analityczna.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Geometria-analityczna
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rachunek różniczkowy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rachunek różniczkowy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relacje
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="relacja.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relacje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-relacja-formalna-definicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Relacja: Formalna Definicja
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-wasnosci-relacji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Własności Relacji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funkcja-szczegolny-typ-relacji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funkcja: Szczególny Typ Relacji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-anatomia-funkcji-kluczowe-pojecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Anatomia Funkcji: Kluczowe Pojęcia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Anatomia Funkcji: Kluczowe Pojęcia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-dziedzina-przeciwdziedzina-i-zbior-wartosci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Dziedzina, Przeciwdziedzina i Zbiór Wartości
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-wizualna-reprezentacja-wykres-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Wizualna Reprezentacja: Wykres Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-miejsce-zerowe-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Miejsce Zerowe Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-monotonicznosc-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Monotoniczność Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-rodzaje-funkcji-ze-wzgledu-na-mapowanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Rodzaje Funkcji ze względu na Mapowanie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-skadanie-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Składanie Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ciagi-jako-specjalny-rodzaj-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ciągi jako Specjalny Rodzaj Funkcji 🚂
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ciągi jako Specjalny Rodzaj Funkcji 🚂">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wzor-ogolny-ciagu-a_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wzór Ogólny Ciągu (\(a_n\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-relacja-formalna-definicja" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Relacja: Formalna Definicja
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-wasnosci-relacji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Własności Relacji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funkcja-szczegolny-typ-relacji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Funkcja: Szczególny Typ Relacji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-anatomia-funkcji-kluczowe-pojecia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Anatomia Funkcji: Kluczowe Pojęcia
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Anatomia Funkcji: Kluczowe Pojęcia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-dziedzina-przeciwdziedzina-i-zbior-wartosci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Dziedzina, Przeciwdziedzina i Zbiór Wartości
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-wizualna-reprezentacja-wykres-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Wizualna Reprezentacja: Wykres Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-miejsce-zerowe-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3. Miejsce Zerowe Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-monotonicznosc-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4. Monotoniczność Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-rodzaje-funkcji-ze-wzgledu-na-mapowanie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Rodzaje Funkcji ze względu na Mapowanie
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-skadanie-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Składanie Funkcji
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ciagi-jako-specjalny-rodzaj-funkcji" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Ciągi jako Specjalny Rodzaj Funkcji 🚂
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ciągi jako Specjalny Rodzaj Funkcji 🚂">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wzor-ogolny-ciagu-a_n" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Wzór Ogólny Ciągu (\(a_n\))
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="relacje-i-funkcje-analiza-matematycznych-zaleznosci">Relacje i Funkcje: Analiza Matematycznych Zależności</h1>
+<p>Pojęcia relacji i funkcji stanowią fundament wielu dziedzin matematyki wyższej. Umożliwiają one formalny opis zależności i powiązań między elementami zbiorów. Niniejsza notatka przedstawia te koncepcje w sposób usystematyzowany, wprowadzając kluczowe definicje i własności.</p>
+<hr />
+<h2 id="1-relacja-formalna-definicja">1. Relacja: Formalna Definicja</h2>
+<p>Aby precyzyjnie zdefiniować relację, musimy najpierw wprowadzić pojęcie <strong>iloczynu kartezjańskiego</strong>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Iloczyn Kartezjański (Produkt Kartezjański)</p>
+</div>
+<p>Dla danych dwóch zbiorów <span class="arithmatex">\(X\)</span> i <span class="arithmatex">\(Y\)</span>, ich iloczyn kartezjański, oznaczany jako <span class="arithmatex">\(X \times Y\)</span>, to zbiór wszystkich możliwych uporządkowanych par <span class="arithmatex">\((x, y)\)</span>, takich że <span class="arithmatex">\(x \in X\)</span> oraz <span class="arithmatex">\(y \in Y\)</span>.</p>
+<div class="arithmatex">\[
+X \times Y = \{ (x, y) : x \in X \land y \in Y \}
+\]</div>
+<p><strong>Przykład:</strong> Jeśli <span class="arithmatex">\(X = \{1, 2\}\)</span> i <span class="arithmatex">\(Y = \{a, b\}\)</span>, to <span class="arithmatex">\(X \times Y = \{(1, a), (1, b), (2, a), (2, b)\}\)</span>.</p>
+<p>Mając tę definicję, możemy formalnie określić, czym jest relacja.</p>
+<div class="admonition success">
+<p class="admonition-title">Definicja Relacji</p>
+</div>
+<p><strong>Relacją</strong> <span class="arithmatex">\(R\)</span> ze zbioru <span class="arithmatex">\(X\)</span> do zbioru <span class="arithmatex">\(Y\)</span> nazywamy dowolny podzbiór iloczynu kartezjańskiego <span class="arithmatex">\(X \times Y\)</span>.
+$$ R \subseteq X \times Y $$
+Jeśli para <span class="arithmatex">\((x, y)\)</span> należy do relacji <span class="arithmatex">\(R\)</span>, mówimy, że element <span class="arithmatex">\(x\)</span> jest w relacji z elementem <span class="arithmatex">\(y\)</span>, co zapisujemy jako <span class="arithmatex">\(xRy\)</span>.</p>
+<hr />
+<h2 id="2-wasnosci-relacji">2. Własności Relacji</h2>
+<p>Relacje zdefiniowane na jednym zbiorze (tzn. <span class="arithmatex">\(R \subseteq X \times X\)</span>) mogą posiadać pewne charakterystyczne własności.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Własność: Zwrotność (Reflexivity)</p>
+</div>
+<p>Relacja jest zwrotna, jeśli każdy element jest w relacji sam ze sobą.
+$$ \forall_{x \in X}: xRx $$
+    <em>Przykład:</em> Relacja "mniejszy lub równy" (<span class="arithmatex">\(\le\)</span>) na zbiorze liczb rzeczywistych, ponieważ dla każdej liczby <span class="arithmatex">\(x\)</span>, zachodzi <span class="arithmatex">\(x \le x\)</span>.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Własność: Symetria (Symmetry)</p>
+</div>
+<p>Relacja jest symetryczna, jeśli dla dowolnych dwóch elementów, bycie w relacji działa w obie strony.
+$$ \forall_{x, y \in X}: (xRy \implies yRx) $$
+<em>Przykład:</em> Relacja "bycia rodzeństwem" w zbiorze ludzi. Jeśli Ania jest siostrą Bartka, to Bartek jest bratem Ani.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Własność: Przechodniość (Transitivity)</p>
+</div>
+<p>Relacja jest przechodnia, jeśli można ją "przenosić" przez wspólny element.
+$$ \forall_{x, y, z \in X}: (xRy \land yRz \implies xRz) $$
+    <em>Przykład:</em> Relacja "bycia wyższym" (<span class="arithmatex">\(&gt;\)</span>) na zbiorze ludzi. Jeśli Jan jest wyższy od Piotra, a Piotr jest wyższy od Adama, to Jan jest wyższy od Adama.</p>
+<div class="admonition important">
+<p class="admonition-title">Relacja Równoważności</p>
+</div>
+<p>Relacja, która jest jednocześnie <strong>zwrotna, symetryczna i przechodnia</strong>, nazywana jest <strong>relacją równoważności</strong>. Dzieli ona zbiór na rozłączne podzbiory, nazywane klasami abstrakcji.
+<em>Klasyczny przykład:</em> Relacja przystawania modulo <span class="arithmatex">\(n\)</span> (np. <span class="arithmatex">\(x \equiv y \pmod{3}\)</span> oznacza, że <span class="arithmatex">\(x\)</span> i <span class="arithmatex">\(y\)</span> dają tę samą resztę z dzielenia przez 3).</p>
+<hr />
+<h2 id="3-funkcja-szczegolny-typ-relacji">3. Funkcja: Szczególny Typ Relacji</h2>
+<p>Funkcja to jeden z najważniejszych obiektów w matematyce. Jest to specjalny rodzaj relacji, który spełnia bardzo rygorystyczne warunki. Dzięki tym warunkom funkcje są przewidywalne i pozwalają na modelowanie szerokiego zakresu zjawisk.</p>
+<div class="admonition success">
+<p class="admonition-title">Definicja Formalna Funkcji</p>
+</div>
+<p><strong>Funkcją</strong> <span class="arithmatex">\(f\)</span> ze zbioru <span class="arithmatex">\(X\)</span> w zbiór <span class="arithmatex">\(Y\)</span>, co oznaczamy zapisem <span class="arithmatex">\(f: X \to Y\)</span>, nazywamy taką relację, w której <strong>każdemu elementowi ze zbioru <span class="arithmatex">\(X\)</span></strong> przyporządkowany jest <strong>dokładnie jeden element ze zbioru <span class="arithmatex">\(Y\)</span></strong>.</p>
+<p>Warunek ten można zapisać formalnie:
+$$
+\forall_{x \in X}\ \exists!_{y \in Y}: (x,y) \in f
+$$
+Symbol <span class="arithmatex">\(\exists!\)</span> oznacza "istnieje dokładnie jeden". W kontekście funkcji, zamiast pisać <span class="arithmatex">\((x,y) \in f\)</span>, używamy wygodniejszej notacji <span class="arithmatex">\(y = f(x)\)</span>.</p>
+<hr />
+<h2 id="4-anatomia-funkcji-kluczowe-pojecia">4. Anatomia Funkcji: Kluczowe Pojęcia</h2>
+<p>Aby w pełni zrozumieć i analizować funkcje, musimy zdefiniować zbiory, na których operują, oraz ich kluczowe właściwości.</p>
+<h3 id="41-dziedzina-przeciwdziedzina-i-zbior-wartosci">4.1. Dziedzina, Przeciwdziedzina i Zbiór Wartości</h3>
+<p>Każda funkcja jest zdefiniowana przez trzy fundamentalne zbiory:</p>
+<ul>
+<li><strong>Dziedzina (ang. <em>domain</em>)</strong>: Oznaczana jako <span class="arithmatex">\(D_f\)</span>, to zbiór <span class="arithmatex">\(X\)</span> wszystkich dopuszczalnych argumentów ("wejść") dla funkcji. To z tego zbioru bierzemy <span class="arithmatex">\(x\)</span>.</li>
+<li><strong>Przeciwdziedzina (ang. <em>codomain</em>)</strong>: To zbiór <span class="arithmatex">\(Y\)</span>, który określa typ wartości, jakie funkcja <em>może</em> zwracać. Jest to zadeklarowany zbiór "potencjalnych wyników".</li>
+<li><strong>Zbiór wartości (ang. <em>range</em> lub <em>image</em>)</strong>: To podzbiór przeciwdziedziny (<span class="arithmatex">\(f(X) \subseteq Y\)</span>) składający się ze wszystkich wartości, które funkcja <em>faktycznie</em> przyjmuje. Jest to zbiór wszystkich <span class="arithmatex">\(y=f(x)\)</span> dla każdego <span class="arithmatex">\(x\)</span> z dziedziny.</li>
+</ul>
+<div class="admonition example">
+<p class="admonition-title">Różnica między Przeciwdziedziną a Zbiorem Wartości</p>
+</div>
+<p>Wyobraźmy sobie maszynę do napojów.
+_ <strong>Dziedzina</strong> to przyciski, które możemy nacisnąć (np. {Cola, Sprite, Woda}).
+_ <strong>Przeciwdziedzina</strong> to wszystkie możliwe napoje, które <em>teoretycznie</em> mogą być w maszynie (np. {Cola, Sprite, Woda, Sok Jabłkowy, Sok Pomarańczowy}). To jest "deklaracja" możliwości maszyny.
+* <strong>Zbiór wartości</strong> to napoje, które *faktycznie* znajdują się w maszynie i możemy je otrzymać (np. {Cola, Woda}). Może się okazać, że Sprite się skończył, a soków nigdy nie było.</p>
+<p><strong>Przykład matematyczny:</strong>
+Rozważmy funkcję <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span> (z liczb rzeczywistych w liczby rzeczywiste) zdefiniowaną wzorem <span class="arithmatex">\(f(x) = x^2\)</span>.
+*   <strong>Dziedzina:</strong> <span class="arithmatex">\(\mathbb{R}\)</span> (możemy podnieść do kwadratu dowolną liczbę rzeczywistą).
+*   <strong>Przeciwdziedzina:</strong> <span class="arithmatex">\(\mathbb{R}\)</span> (zadeklarowaliśmy, że wyniki będą liczbami rzeczywistymi).
+*   <strong>Zbiór wartości:</strong> <span class="arithmatex">\([0, \infty)\)</span>, czyli zbiór liczb rzeczywistych nieujemnych. Kwadrat dowolnej liczby rzeczywistej jest zawsze nieujemny.</p>
+<p>Widać tu wyraźnie, że zbiór wartości (<span class="arithmatex">\([0, \infty)\)</span>) jest właściwym podzbiorem przeciwdziedziny (<span class="arithmatex">\(\mathbb{R}\)</span>). Liczba <span class="arithmatex">\(-5\)</span> należy do przeciwdziedziny, ale nie do zbioru wartości, bo nie istnieje liczba rzeczywista <span class="arithmatex">\(x\)</span> taka, że <span class="arithmatex">\(x^2 = -5\)</span>.</p>
+<h3 id="42-wizualna-reprezentacja-wykres-funkcji">4.2. Wizualna Reprezentacja: Wykres Funkcji</h3>
+<p>Dla funkcji, których dziedzina i przeciwdziedzina to podzbiory liczb rzeczywistych (np. <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span>), możemy stworzyć jej graficzną reprezentację w układzie współrzędnych.</p>
+<div class="admonition note">
+<p class="admonition-title">Wykres w Kartezjańskim Układzie Współrzędnych</p>
+</div>
+<p><strong>Wykres funkcji</strong> to zbiór wszystkich punktów o współrzędnych <span class="arithmatex">\((x, y)\)</span>, dla których spełniona jest zależność <span class="arithmatex">\(y = f(x)\)</span>.
+$$ W_f = { (x, f(x)) : x \in D_f } $$
+Oś pozioma (oś OX) reprezentuje dziedzinę funkcji, a oś pionowa (oś OY) jej wartości. Wykres pozwala na intuicyjne zrozumienie zachowania funkcji: jej wzrostu, spadku, punktów charakterystycznych itp.</p>
+<p><strong>Test Linii Pionowej:</strong> Krzywa na płaszczyźnie jest wykresem funkcji wtedy i tylko wtedy, gdy każda prosta pionowa przecina ją w co najwyżej jednym punkcie. Ten test jest bezpośrednią konsekwencją definicji funkcji, która wymaga, aby jednemu argumentowi <span class="arithmatex">\(x\)</span> odpowiadała dokładnie jedna wartość <span class="arithmatex">\(y\)</span>.</p>
+<h3 id="43-miejsce-zerowe-funkcji">4.3. Miejsce Zerowe Funkcji</h3>
+<p>Jednym z najważniejszych zadań w analizie funkcji jest znalezienie jej miejsc zerowych.</p>
+<div class="admonition definition">
+<p class="admonition-title">Miejsce Zerowe (Pierwiastek Funkcji)</p>
+</div>
+<p><strong>Miejscem zerowym</strong> funkcji <span class="arithmatex">\(f\)</span> nazywamy taki argument <span class="arithmatex">\(x_0\)</span> należący do jej dziedziny, dla którego wartość funkcji wynosi zero.
+$$ f(x_0) = 0 $$
+    Geometrycznie, miejsca zerowe to pierwsze współrzędne (odcięte) punktów, w których wykres funkcji przecina oś OX. Funkcja może nie mieć miejsc zerowych (np. <span class="arithmatex">\(f(x) = x^2 + 1\)</span>), mieć jedno, kilka, a nawet nieskończenie wiele (np. <span class="arithmatex">\(f(x) = \sin(x)\)</span>).</p>
+<h3 id="44-monotonicznosc-funkcji">4.4. Monotoniczność Funkcji</h3>
+<p>Monotoniczność to fundamentalna własność opisująca, jak wartości funkcji zmieniają się wraz ze wzrostem argumentów. Analizujemy ją na określonych przedziałach zawartych w dziedzinie.</p>
+<div class="admonition abstract">
+<p class="admonition-title">Definicje Monotoniczności</p>
+</div>
+<p>Niech <span class="arithmatex">\(f\)</span> będzie funkcją, a <span class="arithmatex">\(P\)</span> pewnym przedziałem zawartym w jej dziedzinie. Dla dowolnych argumentów <span class="arithmatex">\(x_1, x_2 \in P\)</span> takich, że <span class="arithmatex">\(x_1 &lt; x_2\)</span>:</p>
+<ul>
+<li>Funkcja jest <strong>rosnąca</strong> na przedziale <span class="arithmatex">\(P\)</span>, jeśli <span class="arithmatex">\(f(x_1) &lt; f(x_2)\)</span>.
+<em>(Wraz ze wzrostem argumentów rosną wartości funkcji).</em></li>
+<li>Funkcja jest <strong>malejąca</strong> na przedziale <span class="arithmatex">\(P\)</span>, jeśli <span class="arithmatex">\(f(x_1) &gt; f(x_2)\)</span>.
+<em>(Wraz ze wzrostem argumentów wartości funkcji maleją).</em></li>
+<li>Funkcja jest <strong>stała</strong> na przedziale <span class="arithmatex">\(P\)</span>, jeśli <span class="arithmatex">\(f(x_1) = f(x_2)\)</span>.
+<em>(Wartości funkcji pozostają niezmienne).</em></li>
+<li>Funkcja jest <strong>niemalejąca</strong> na przedziale <span class="arithmatex">\(P\)</span>, jeśli <span class="arithmatex">\(f(x_1) \le f(x_2)\)</span>.
+<em>(Dopuszcza wzrost lub utrzymanie stałej wartości).</em></li>
+<li>Funkcja jest <strong>nierosnąca</strong> na przedziale <span class="arithmatex">\(P\)</span>, jeśli <span class="arithmatex">\(f(x_1) \ge f(x_2)\)</span>.
+<em>(Dopuszcza spadek lub utrzymanie stałej wartości).</em></li>
+</ul>
+<p>Funkcje, które są tylko rosnące lub tylko malejące na danym przedziale, nazywamy <strong>ściśle monotonicznymi</strong>.</p>
+<hr />
+<h2 id="5-rodzaje-funkcji-ze-wzgledu-na-mapowanie">5. Rodzaje Funkcji ze względu na Mapowanie</h2>
+<p>Sposób, w jaki funkcja mapuje elementy dziedziny na elementy przeciwdziedziny, pozwala wyróżnić jej trzy ważne typy.</p>
+<div class="admonition question">
+<p class="admonition-title">Typ Funkcji: Iniekcja (funkcja różnowartościowa)</p>
+</div>
+<p>Funkcja jest iniekcją, jeśli nie ma dwóch różnych argumentów, które przyjmowałyby tę samą wartość. Każdy element ze zbioru wartości jest przypisany do co najwyżej jednego argumentu.
+$$
+\forall_{x_1, x_2 \in X}: (x_1 \neq x_2 \implies f(x_1) \neq f(x_2))
+$$
+<strong>Test Linii Poziomej:</strong> Funkcja jest różnowartościowa, jeśli każda prosta pozioma przecina jej wykres w co najwyżej jednym punkcie.</p>
+<div class="admonition question">
+<p class="admonition-title">Typ Funkcji: Suriekcja (funkcja 'na')</p>
+</div>
+<p>Funkcja jest suriekcją, jeśli jej zbiór wartości jest równy całej przeciwdziedzinie (<span class="arithmatex">\(f(X) = Y\)</span>). Oznacza to, że każdy element z przeciwdziedziny jest wartością funkcji dla co najmniej jednego argumentu.
+$$
+\forall<em>{y \in Y} \exists</em>{x \in X}: f(x) = y
+$$</p>
+<div class="admonition question">
+<p class="admonition-title">Typ Funkcji: Bijekcja (funkcja wzajemnie jednoznaczna)</p>
+</div>
+<p>Funkcja jest bijekcją, jeśli jest jednocześnie <strong>iniekcją i suriekcją</strong>. Tworzy idealne "parowanie" jeden do jednego między elementami zbiorów <span class="arithmatex">\(X\)</span> i <span class="arithmatex">\(Y\)</span>. Bijekcje są kluczowe, ponieważ tylko dla nich istnieją funkcje odwrotne.</p>
+<hr />
+<h2 id="6-skadanie-funkcji">6. Składanie Funkcji</h2>
+<p>Funkcje można łączyć w procesie zwanym składaniem, tworząc w ten sposób nowe, bardziej złożone funkcje.</p>
+<div class="admonition definition">
+<p class="admonition-title">Złożenie Funkcji (Superpozycja)</p>
+</div>
+<p>Jeśli mamy dwie funkcje, <span class="arithmatex">\(f: X \to Y\)</span> oraz <span class="arithmatex">\(g: Z \to W\)</span>, i zbiór wartości funkcji <span class="arithmatex">\(f\)</span> jest zawarty w dziedzinie funkcji <span class="arithmatex">\(g\)</span> (<span class="arithmatex">\(f(X) \subseteq Z\)</span>), to możemy zdefiniować ich <strong>złożenie</strong> <span class="arithmatex">\(g \circ f\)</span> (czyt. "<em>g</em> złożone z <em>f</em>"). Jest to funkcja z <span class="arithmatex">\(X\)</span> do <span class="arithmatex">\(W\)</span>.
+$$ (g \circ f)(x) = g(f(x)) $$
+    Działanie złożenia polega na tym, że wynik funkcji wewnętrznej (<span class="arithmatex">\(f\)</span>) staje się argumentem dla funkcji zewnętrznej (<span class="arithmatex">\(g\)</span>).</p>
+<div class="admonition example">
+<p class="admonition-title">Przykład Złożenia Funkcji</p>
+</div>
+<p>Niech <span class="arithmatex">\(f: \mathbb{R} \to \mathbb{R}\)</span>, <span class="arithmatex">\(f(x) = 2x+1\)</span> oraz <span class="arithmatex">\(g: \mathbb{R} \to \mathbb{R}\)</span>, <span class="arithmatex">\(g(x) = x^2 - 3\)</span>.</p>
+<ul>
+<li><strong>Złożenie <span class="arithmatex">\(g \circ f\)</span>:</strong>
+        <span class="arithmatex">\((g \circ f)(x) = g(f(x)) = g(2x+1) = (2x+1)^2 - 3 = (4x^2 + 4x + 1) - 3 = 4x^2 + 4x - 2\)</span>.</li>
+<li><strong>Złożenie <span class="arithmatex">\(f \circ g\)</span>:</strong>
+        <span class="arithmatex">\((f \circ g)(x) = f(g(x)) = f(x^2 - 3) = 2(x^2 - 3) + 1 = 2x^2 - 6 + 1 = 2x^2 - 5\)</span>.</li>
+</ul>
+<p>Jak widać na przykładzie, składanie funkcji na ogół <strong>nie jest przemienne</strong>: <span class="arithmatex">\(g \circ f \neq f \circ g\)</span>.</p>
+<hr />
+<h2 id="7-ciagi-jako-specjalny-rodzaj-funkcji">7. Ciągi jako Specjalny Rodzaj Funkcji 🚂</h2>
+<p>Pomyśl o ciągu jak o <strong>ponumerowanej liście</strong> lub <strong>kolejce</strong> elementów. W matematyce ciąg to nic innego jak funkcja, ale... bardzo wybredna co do swoich argumentów!</p>
+<div class="admonition tip">
+<p class="admonition-title">Dlaczego ciąg to funkcja?</p>
+<p>Ciąg liczbowy to funkcja, która przyporządkowuje wartości <strong>tylko dla liczb naturalnych dodatnich</strong>.</p>
+<p>Wyobraź sobie numerki w szatni. Nie ma numerka "2 i pół" ani numerka "-5". Są tylko 1, 2, 3, 4 itd.</p>
+<ul>
+<li><strong>Dziedzina (<span class="arithmatex">\(D\)</span>)</strong>: To zawsze zbiór liczb naturalnych dodatnich <span class="arithmatex">\(\mathbb{N}_+ = \{1, 2, 3, 4, \dots\}\)</span>. Argumenty oznaczamy literą <span class="arithmatex">\(n\)</span> (zamiast <span class="arithmatex">\(x\)</span>), co kojarzy się z "numerem".</li>
+<li><strong>Zbiór wartości</strong>: To liczby, które stoją "pod numerkami". Mogą to być dowolne liczby rzeczywiste <span class="arithmatex">\(\mathbb{R}\)</span> (ujemne, ułamki, pierwiastki).</li>
+</ul>
+</div>
+<h3 id="wzor-ogolny-ciagu-a_n">Wzór Ogólny Ciągu (<span class="arithmatex">\(a_n\)</span>)</h3>
+<p>Wzór ogólny <span class="arithmatex">\(a_n\)</span> to <strong>instrukcja (przepis)</strong>, która mówi nam, jaka liczba stoi na <span class="arithmatex">\(n\)</span>-tym miejscu. To odpowiednik wzoru funkcji <span class="arithmatex">\(f(x)\)</span>.</p>
+<div class="admonition example">
+<p class="admonition-title">Obliczanie wyrazów ciągu</p>
+<p>Weźmy ciąg zdefiniowany wzorem:</p>
+<div class="arithmatex">\[ a_n = 2n + 1 \]</div>
+<p>Ten wzór mówi: <em>"Aby znaleźć liczbę na miejscu n, pomnóż numer miejsca przez 2 i dodaj 1"</em>.</p>
+<p>Sprawdźmy, jakie liczby stoją na pierwszych trzech miejscach (podstawiamy <span class="arithmatex">\(1, 2, 3\)</span> za <span class="arithmatex">\(n\)</span>):</p>
+<ol>
+<li>
+<p><strong>Dla <span class="arithmatex">\(n=1\)</span> (pierwszy wyraz):</strong>
+    $$ a_1 = 2 \cdot 1 + 1 = 3 $$
+    <em>(Na pierwszym miejscu stoi liczba 3)</em></p>
+</li>
+<li>
+<p><strong>Dla <span class="arithmatex">\(n=2\)</span> (drugi wyraz):</strong>
+    $$ a_2 = 2 \cdot 2 + 1 = 5 $$
+    <em>(Na drugim miejscu stoi liczba 5)</em></p>
+</li>
+<li>
+<p><strong>Dla <span class="arithmatex">\(n=3\)</span> (trzeci wyraz):</strong>
+    $$ a_3 = 2 \cdot 3 + 1 = 7 $$
+    <em>(Na trzecim miejscu stoi liczba 7)</em></p>
+</li>
+</ol>
+<p>Otrzymaliśmy więc ciąg liczb nieparzystych: <span class="arithmatex">\(3, 5, 7, \dots\)</span>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="js/katex.js"></script>
+      
+        <script src="js/matrix-calculator.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

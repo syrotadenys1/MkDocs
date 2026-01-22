@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
       
         
         <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
@@ -49,11 +49,7 @@
       
     
     
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap">
-    
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
-    
-      <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -406,6 +402,34 @@
     
   
     Równania w języku macierzy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="calc-test.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Kalkulator macierzy
   
 
     
@@ -791,6 +815,90 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Rachunek różniczkowy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Rachunek różniczkowy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="relacja.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relacje
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1050,16 +1158,18 @@ gdzie \(|\vec{a}|\) i \(|\vec{b}|\) to długości (normy) wektorów, a \(\theta\
 <div class="admonition info">
 <p class="admonition-title">Rzut Wektora (Projekcja)</p>
 </div>
-<p>Jednym z kluczowych zastosowań iloczynu skalarnego jest obliczanie <strong>rzutu wektora</strong> na inny wektor. Rzut wektora \(\vec{a}\) na \(\vec{b}\) to "cień", jaki \(\vec{a}\) rzuca na linię, wzdłuż której leży \(\vec{b}\).Długość tego rzutu (skalar) wynosi:
-\[\text{comp}<em _vec_b="\vec{b">{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|}\]
-Wektor rzutu obliczamy, mnożąc długość rzutu przez wersor wektora \(\vec{b}\):
-\[
-\text{proj}</em>
-\]}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \vec{b</p>
+<p>Jednym z kluczowych zastosowań iloczynu skalarnego jest obliczanie <strong>rzutu wektora</strong> na inny wektor. Rzut wektora \(\vec{a}\) na \(\vec{b}\) to "cień", jaki \(\vec{a}\) rzuca na linię, wzdłuż której leży \(\vec{b}\).Długość tego rzutu (skalar) wynosi:</p>
+<div class="arithmatex">\[
+\text{comp}_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|}
+\]</div>
+<p>Wektor rzutu obliczamy, mnożąc długość rzutu przez wersor wektora \(\vec{b}\):</p>
+<div class="arithmatex">\[
+\text{proj}\_{\vec{b}}\vec{a} = \frac{\vec{a} \cdot \vec{b}}{\|\vec{b}\|^2} \vec{b}
+\]</div>
 <p>Znak iloczynu skalarnego mówi o kącie między wektorami:</p>
 <ul>
-<li><strong>Wynik &gt; 0:</strong> Kąt jest ostry ( &lt; 90° ). Wektory "wskazują z grubsza w tę samą stronę".</li>
-<li><strong>Wynik &lt; 0:</strong> Kąt jest rozwarty ( &gt; 90° ). Wektory "wskazują w przeciwne strony".</li>
+<li><strong>Wynik &gt; 0:</strong> Kąt jest ostry (\(&lt; 90°\)). Wektory "wskazują z grubsza w tę samą stronę".</li>
+<li><strong>Wynik &lt; 0:</strong> Kąt jest rozwarty (\(&gt; 90°\)). Wektory "wskazują w przeciwne strony".</li>
 <li><strong>Wynik = 0:</strong> Wektory są prostopadłe (ortogonalne).</li>
 </ul>
 <div class="admonition example">
@@ -1139,18 +1249,27 @@ Rozwinięcie tego wyznacznika (np. metodą Sarrusa) daje bezpośrednio wartość
 <h3 id="interpretacja-geometryczna-objetosc-i-orientacja">Interpretacja Geometryczna: Objętość i Orientacja</h3>
 <div class="admonition info">
 <p class="admonition-title">Objętość Równoległościanu</p>
-</div>
 <p>Najważniejszą interpretacją geometryczną iloczynu mieszanego jest objętość. Wartość bezwzględna \(|(\vec{a} \times \vec{b}) \cdot \vec{c}|\) jest równa <strong>objętości równoległościanu</strong> rozpiętego na wektorach \(\vec{a}, \vec{b}, \vec{c}\).</p>
-<pre><code>**Dlaczego tak jest?**
-1.  Długość wektora \\(\|\vec{a} \times \vec{b}\|\\) to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \\(\vec{a}\\) i \\(\vec{b}\\)).
-2.  Wektor \\(\vec{n} = \vec{a} \times \vec{b}\\) jest prostopadły do tej podstawy.
-3.  Iloczyn skalarny \\(\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)\\) oblicza rzut wektora \\(\vec{c}\\) na wektor normalny \\(\vec{n}\\). Ten rzut, \\(\|\vec{c}\| \cos(\phi)\\), jest dokładnie wysokością \\(h\\) równoległościanu.
-4.  Ostatecznie, mnożymy pole podstawy przez wysokość, otrzymując objętość: \\(V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}\\).
-</code></pre>
+<p><strong>Dlaczego tak jest?</strong>
+1.  Długość wektora
+  $\|\vec{a} \times \vec{b}\|$ to pole powierzchni podstawy równoległościanu (równoległoboku rozpiętego na \(\vec{a}\) i \(\vec{b}\)).
+2.  Wektor
+    $\vec{n} = \vec{a} \times \vec{b}$        jest prostopadły do tej podstawy.
+3.  Iloczyn skalarny
+    <span class="arithmatex">\(\vec{n} \cdot \vec{c} = \|\vec{n}\| \|\vec{c}\| \cos(\phi)\)</span>
+    oblicza rzut wektora <span class="arithmatex">\(\vec{c}\)</span> na wektor normalny <span class="arithmatex">\(\vec{n}\)</span>. Ten rzut, <span class="arithmatex">\(\|\vec{c}\| \cos(\phi)\)</span>, jest dokładnie wysokością <span class="arithmatex">\(h\)</span> równoległościanu.
+4.  Ostatecznie, mnożymy pole podstawy przez wysokość, otrzymując objętość:
+    <span class="arithmatex">\(V = (\text{Pole podstawy}) \cdot h = \|\vec{a} \times \vec{b}\| \cdot (\|\vec{c}\| \cos(\phi)) = (\vec{a} \times \vec{b}) \cdot \vec{c}\)</span></p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Orientacja Układu Wektorów</p>
+<p>Znak iloczynu mieszanego (przed wzięciem wartości bezwzględnej) określa orientację układu wektorów:</p>
+<ul>
+<li><strong>Wynik &gt; 0:</strong> Układ \((\vec{a}, \vec{b}, \vec{c})\) jest <strong>prawoskrętny</strong>. Oznacza to, że wektory te zachowują się podobnie do standardowych osi \((X, Y, Z)\).</li>
+<li><strong>Wynik &lt; 0:</strong> Układ jest <strong>lewoskrętny</strong>.</li>
+<li><strong>Wynik = 0:</strong> Wektory są <strong>współpłaszczyznowe (koplanarne)</strong>. Nie tworzą one bryły o niezerowej objętości. Jest to najważniejszy test na współpłaszczyznowość.</li>
+</ul>
 </div>
-<p>Znak iloczynu mieszanego (przed wzięciem wartości bezwzględnej) określa orientację układu wektorów: - <strong>Wynik &gt; 0:</strong> Układ \((\vec{a}, \vec{b}, \vec{c})\) jest <strong>prawoskrętny</strong>. Oznacza to, że wektory te zachowują się podobnie do standardowych osi \((X, Y, Z)\). - <strong>Wynik &lt; 0:</strong> Układ jest <strong>lewoskrętny</strong>. - <strong>Wynik = 0:</strong> Wektory są <strong>współpłaszczyznowe (koplanarne)</strong>. Nie tworzą one bryły o niezerowej objętości. Jest to najważniejszy test na współpłaszczyznowość.</p>
 <h3 id="wasciwosci-algebraiczne">Właściwości Algebraiczne</h3>
 <p>Właściwości iloczynu mieszanego wynikają bezpośrednio z właściwości wyznaczników:</p>
 <ul>
@@ -1171,14 +1290,16 @@ Rozwijając względem pierwszego wiersza:
 = |2 \cdot \begin{vmatrix} 3 &amp; 0 \ 2 &amp; 4 \end{vmatrix} - 0 + 0| = |2 \cdot (3 \cdot 4 - 0 \cdot 2)| = |2 \cdot 12| = 24
 \]
 Objętość wynosi 24 jednostki sześcienne.</p>
-<pre><code>**2. Sprawdź, czy wektory** \\(\vec{u}=[1,2,3]\\), \\(\vec{v}=[4,5,6]\\), i \\(\vec{w}=[7,8,9]\\) są współpłaszczyznowe.
-*(To jest przykład z poprzedniej wersji, powtórzony dla kompletności)*
-\\[
-(\vec{u}, \vec{v}, \vec{w}) = \begin{vmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{vmatrix}
-= 1(45-48) - 2(36-42) + 3(32-35) = -3 + 12 - 9 = 0
-\\]
-Wynik wynosi 0, zatem wektory są współpłaszczyznowe.
-</code></pre>
+<ol>
+<li>Sprawdź, czy wektory <span class="arithmatex">\(vec {u} =[1,2,3]\)</span>, <span class="arithmatex">\(vec{v}=[4,5,6]\)</span>, i <span class="arithmatex">\(vec{w}=[7,8,9]\)</span> są współpłaszczyznowe.
+   <em>(To jest przykład z poprzedniej wersji, powtórzony dla kompletności)</em>
+   \[
+   (\vec{u}, \vec{v}, \vec{w}) = \begin{vmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{vmatrix}
+   = 1(45-48) - 2(36-42) + 3(32-35) =
+   -3 + 12 - 9 = 0
+   \]
+   Wynik wynosi 0, zatem wektory są współpłaszczyznowe.</li>
+</ol>
 <hr />
 <h2 id="4-zastosowania-w-nauce-i-technice">4. Zastosowania w Nauce i Technice</h2>
 <h3 id="fizyka">Fizyka</h3>
@@ -1243,16 +1364,22 @@ Wynik wynosi 0, zatem wektory są współpłaszczyznowe.
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
-        <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
       
-        <script src="js/katex-render.js"></script>
+        <script src="js/katex.js"></script>
+      
+        <script src="js/matrix-calculator.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
